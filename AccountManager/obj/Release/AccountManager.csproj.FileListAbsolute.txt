@@ -1,0 +1,10 @@
+C:\Users\JesseMikael\Desktop\AccountManager\bin\Release\AccountManager.exe.config
+C:\Users\JesseMikael\Desktop\AccountManager\bin\Release\AccountManager.exe
+C:\Users\JesseMikael\Desktop\AccountManager\bin\Release\AccountManager.pdb
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.csprojAssemblyReference.cache
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.AccountManagerForm.resources
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.Properties.Resources.resources
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.csproj.GenerateResource.cache
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.csproj.CoreCompileInputs.cache
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.exe
+C:\Users\JesseMikael\Desktop\AccountManager\obj\Release\AccountManager.pdb
