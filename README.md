@@ -5,4 +5,4 @@ Account manager is an application which helps you save your accounts' usernames 
 
 ## Executable
 
-The executable is located at AccountManager/release/AccountManager.exe
+The executable is located at AccountManager/bin/release/AccountManager.exe
