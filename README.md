@@ -1,6 +1,6 @@
 # Account Manager
 
-Account manager is an application which helps you save your accounts' usernames and passwords locally to your computer with encryption.
+Account manager is an application which helps you save your accounts' usernames and passwords locally to your computer using encryption.
 
 
 ## Executable
