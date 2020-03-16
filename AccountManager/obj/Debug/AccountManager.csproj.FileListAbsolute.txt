@@ -1,9 +1,0 @@
-C:\Users\JesseMikael\Desktop\AccountManager\obj\Debug\AccountManager.Properties.Resources.resources
-C:\Users\JesseMikael\Desktop\AccountManager\obj\Debug\AccountManager.csproj.GenerateResource.cache
-C:\Users\JesseMikael\Desktop\AccountManager\obj\Debug\AccountManager.csproj.CoreCompileInputs.cache
-C:\Users\JesseMikael\Desktop\AccountManager\bin\Debug\AccountManager.exe.config
-C:\Users\JesseMikael\Desktop\AccountManager\bin\Debug\AccountManager.exe
-C:\Users\JesseMikael\Desktop\AccountManager\bin\Debug\AccountManager.pdb
-C:\Users\JesseMikael\Desktop\AccountManager\obj\Debug\AccountManager.AccountManagerForm.resources
-C:\Users\JesseMikael\Desktop\AccountManager\obj\Debug\AccountManager.exe
-C:\Users\JesseMikael\Desktop\AccountManager\obj\Debug\AccountManager.pdb
