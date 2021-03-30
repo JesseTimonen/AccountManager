@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -14,15 +15,16 @@ namespace AccountManager
         private string filePath;
         private string encryptionKey;
         private List<KeyValuePair<string, string[]>> accountData = new List<KeyValuePair<string, string[]>>();
+        private Random random = new Random();
+        private StringBuilder stringBuilder = new StringBuilder();
 
         private const int accountLimit = 100;
         private List<Panel> accountPanels = new List<Panel>();
         private List<Label> titleLabels = new List<Label>();
         private List<Label> accountLabels = new List<Label>();
-        private List<Label> passwordLabels = new List<Label>();
-        private List<Label> maskedPasswordLabels = new List<Label>();
-        private List<Button> togglePasswordButtons = new List<Button>();
-        private List<Button> copyButtons = new List<Button>();
+        private List<Button> copyURLButtons = new List<Button>();
+        private List<Button> copyAccountButtons = new List<Button>();
+        private List<Button> copyPasswordButtons = new List<Button>();
         private List<Button> editButtons = new List<Button>();
         private List<Button> deleteButtons = new List<Button>();
         private int editingIndex;
@@ -83,6 +85,25 @@ namespace AccountManager
             }
         }
 
+        private void AddAccountURLInput_Enter(object sender, EventArgs e)
+        {
+            if (AddAccountURLInput.ForeColor == Color.Gray)
+            {
+                AddAccountURLInput.Clear();
+            }
+
+            AddAccountURLInput.ForeColor = Color.White;
+        }
+
+        private void AddAccountURLInput_Leave(object sender, EventArgs e)
+        {
+            if (AddAccountURLInput.Text == "")
+            {
+                AddAccountURLInput.Text = "URL";
+                AddAccountURLInput.ForeColor = Color.Gray;
+            }
+        }
+
         private void AddAccountNameInput_Enter(object sender, EventArgs e)
         {
             if (AddAccountNameInput.ForeColor == Color.Gray)
@@ -121,16 +142,41 @@ namespace AccountManager
             }
         }
 
+        private void AddAccountNotesInput_Enter(object sender, EventArgs e)
+        {
+            if (AddAccountNotesInput.ForeColor == Color.Gray)
+            {
+                AddAccountNotesInput.Clear();
+            }
+
+            AddAccountNotesInput.ForeColor = Color.White;
+        }
+
+        private void AddAccountNotesInput_Leave(object sender, EventArgs e)
+        {
+            if (AddAccountNotesInput.Text == "")
+            {
+                AddAccountNotesInput.Text = "...";
+                AddAccountNotesInput.ForeColor = Color.Gray;
+            }
+        }
+
         private void ResetAddAccountUI()
         {
             AddAccountTitleInput.Text = "Title";
             AddAccountTitleInput.ForeColor = Color.Gray;
+
+            AddAccountURLInput.Text = "URL";
+            AddAccountURLInput.ForeColor = Color.Gray;
 
             AddAccountNameInput.Text = "Username";
             AddAccountNameInput.ForeColor = Color.Gray;
 
             AddAccountPasswordInput.Text = "Password";
             AddAccountPasswordInput.ForeColor = Color.Gray;
+
+            AddAccountNotesInput.Text = "...";
+            AddAccountNotesInput.ForeColor = Color.Gray;
 
             AddAccountFeedback.Text = "";
         }
@@ -152,21 +198,29 @@ namespace AccountManager
 
         private void AddAccountRandomButton_Click(object sender, EventArgs e)
         {
-            AddAccountPasswordInput.Text = CreateRandomString(15, 20);
+            AddAccountPasswordInput.Text = CreateRandomString();
             AddAccountPasswordInput.ForeColor = Color.White;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (AddAccountTitleInput.Text == "" || AddAccountNameInput.Text == "" || AddAccountPasswordInput.Text == "" || AddAccountTitleInput.ForeColor == Color.Gray || AddAccountNameInput.ForeColor == Color.Gray || AddAccountPasswordInput.ForeColor == Color.Gray)
+            if (AddAccountTitleInput.Text == "" || AddAccountTitleInput.ForeColor == Color.Gray)
             {
-                AddAccountFeedback.Text = "Some fields are empty!";
+                AddAccountFeedback.Text = "Title is empty!";
                 return;
             }
 
-            accountData.Add(new KeyValuePair<string, string[]>(Encrypter.Encrypt(AddAccountTitleInput.Text, encryptionKey), new string[] { Encrypter.Encrypt(AddAccountNameInput.Text, encryptionKey), Encrypter.Encrypt(AddAccountPasswordInput.Text, encryptionKey) }));
-            SaveData();
+            accountData.Add(new KeyValuePair<string, string[]>(
+                Encrypter.Encrypt(AddAccountTitleInput.Text, encryptionKey),
+                new string[] {
+                    (AddAccountURLInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(AddAccountURLInput.Text, encryptionKey),
+                    (AddAccountNameInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(AddAccountNameInput.Text, encryptionKey),
+                    (AddAccountPasswordInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(AddAccountPasswordInput.Text, encryptionKey),
+                    (AddAccountNotesInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(AddAccountNotesInput.Text, encryptionKey),
+                }
+            ));
 
+            SaveData();
             DisplayAccounts();
             AddAccountPanel.Visible = false;
             AddAccountButton.Enabled = true;
@@ -204,6 +258,25 @@ namespace AccountManager
             {
                 EditAccountTitleInput.Text = "Title";
                 EditAccountTitleInput.ForeColor = Color.Gray;
+            }
+        }
+
+        private void EditAccountURLInput_Enter(object sender, EventArgs e)
+        {
+            if (EditAccountURLInput.ForeColor == Color.Gray)
+            {
+                EditAccountURLInput.Clear();
+            }
+
+            EditAccountURLInput.ForeColor = Color.White;
+        }
+
+        private void EditAccountURLInput_Leave(object sender, EventArgs e)
+        {
+            if (EditAccountURLInput.Text == "")
+            {
+                EditAccountURLInput.Text = "Title";
+                EditAccountURLInput.ForeColor = Color.Gray;
             }
         }
 
@@ -245,20 +318,83 @@ namespace AccountManager
             }
         }
 
+        private void EditAccountNotesInput_Enter(object sender, EventArgs e)
+        {
+            if (EditAccountNotesInput.ForeColor == Color.Gray)
+            {
+                EditAccountNotesInput.Clear();
+            }
+
+            EditAccountNotesInput.ForeColor = Color.White;
+        }
+
+        private void EditAccountNotesInput_Leave(object sender, EventArgs e)
+        {
+            if (EditAccountNotesInput.Text == "")
+            {
+                EditAccountNotesInput.Text = "...";
+                EditAccountNotesInput.ForeColor = Color.Gray;
+            }
+        }
+
+
+        private void ResetEditAccountUI()
+        {
+            if (EditAccountTitleInput.Text == "")
+            {
+                EditAccountTitleInput.Text = "Title";
+                EditAccountTitleInput.ForeColor = Color.Gray;
+            }
+
+            if (EditAccountURLInput.Text == "")
+            {
+                EditAccountURLInput.Text = "URL";
+                EditAccountURLInput.ForeColor = Color.Gray;
+            }
+
+            if (EditAccountNameInput.Text == "")
+            {
+                EditAccountNameInput.Text = "Username";
+                EditAccountNameInput.ForeColor = Color.Gray;
+            }
+
+            if (EditAccountPasswordInput.Text == "")
+            {
+                EditAccountPasswordInput.Text = "Password";
+                EditAccountPasswordInput.ForeColor = Color.Gray;
+            }
+
+            if (EditAccountNotesInput.Text == "")
+            {
+                EditAccountNotesInput.Text = "...";
+                EditAccountNotesInput.ForeColor = Color.Gray;
+            }
+
+            EditAccountFeedback.Text = "";
+        }
+
 
         /*=====================================================*\
         |                     Edit Account                      |
         \*=====================================================*/
         private void EditAccountButton_Click(object sender, EventArgs e)
         {
-            if (EditAccountTitleInput.Text == "" || EditAccountNameInput.Text == "" || EditAccountPasswordInput.Text == "" || EditAccountTitleInput.ForeColor == Color.Gray || EditAccountNameInput.ForeColor == Color.Gray || EditAccountPasswordInput.ForeColor == Color.Gray)
+            if (EditAccountTitleInput.Text == "" || EditAccountTitleInput.ForeColor == Color.Gray)
             {
-                EditAccountFeedback.Text = "Some fields are empty!";
+                EditAccountFeedback.Text = "Title is empty!";
                 return;
             }
 
             accountData.RemoveAt(editingIndex);
-            accountData.Insert(editingIndex, new KeyValuePair<string, string[]>(Encrypter.Encrypt(EditAccountTitleInput.Text, encryptionKey), new string[] { Encrypter.Encrypt(EditAccountNameInput.Text, encryptionKey), Encrypter.Encrypt(EditAccountPasswordInput.Text, encryptionKey) }));
+            accountData.Insert(editingIndex, new KeyValuePair<string, string[]>(
+                Encrypter.Encrypt(EditAccountTitleInput.Text, encryptionKey),
+                new string[] {
+                    (EditAccountURLInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(EditAccountURLInput.Text, encryptionKey),
+                    (EditAccountNameInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(EditAccountNameInput.Text, encryptionKey),
+                    (EditAccountPasswordInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(EditAccountPasswordInput.Text, encryptionKey),
+                    (EditAccountNotesInput.ForeColor == Color.Gray) ? Encrypter.Encrypt("", encryptionKey) : Encrypter.Encrypt(EditAccountNotesInput.Text, encryptionKey),
+                }
+            ));
             SaveData();
 
             DisplayAccounts();

@@ -7,7 +7,6 @@ using System.Linq;
 
 namespace AccountManager
 {
-
     public partial class AccountManagerForm
     {
         /*=====================================================*\
@@ -39,6 +38,7 @@ namespace AccountManager
                 SettingsCurrentPasswordInput.Clear();
             }
 
+            SettingsCurrentPasswordInput.PasswordChar = '*';
             SettingsCurrentPasswordInput.ForeColor = Color.White;
         }
 
@@ -46,6 +46,7 @@ namespace AccountManager
         {
             if (SettingsCurrentPasswordInput.Text == "")
             {
+                SettingsCurrentPasswordInput.PasswordChar = '\0';
                 SettingsCurrentPasswordInput.Text = "Current password";
                 SettingsCurrentPasswordInput.ForeColor = Color.Gray;
             }
@@ -58,6 +59,7 @@ namespace AccountManager
                 SettingsNewPasswordInput.Clear();
             }
 
+            SettingsNewPasswordInput.PasswordChar = '*';
             SettingsNewPasswordInput.ForeColor = Color.White;
         }
 
@@ -65,6 +67,7 @@ namespace AccountManager
         {
             if (SettingsNewPasswordInput.Text == "")
             {
+                SettingsNewPasswordInput.PasswordChar = '\0';
                 SettingsNewPasswordInput.Text = "New password";
                 SettingsNewPasswordInput.ForeColor = Color.Gray;
             }
@@ -77,6 +80,7 @@ namespace AccountManager
                 SettingsConfirmPasswordInput.Clear();
             }
 
+            SettingsConfirmPasswordInput.PasswordChar = '*';
             SettingsConfirmPasswordInput.ForeColor = Color.White;
         }
 
@@ -84,6 +88,7 @@ namespace AccountManager
         {
             if (SettingsConfirmPasswordInput.Text == "")
             {
+                SettingsConfirmPasswordInput.PasswordChar = '\0';
                 SettingsConfirmPasswordInput.Text = "Confirm new password";
                 SettingsConfirmPasswordInput.ForeColor = Color.Gray;
             }
@@ -96,14 +101,32 @@ namespace AccountManager
 
             SettingsCurrentPasswordInput.Text = "Current password";
             SettingsCurrentPasswordInput.ForeColor = Color.Gray;
+            SettingsCurrentPasswordInput.PasswordChar = '\0';
 
             SettingsNewPasswordInput.Text = "New password";
             SettingsNewPasswordInput.ForeColor = Color.Gray;
+            SettingsNewPasswordInput.PasswordChar = '\0';
 
             SettingsConfirmPasswordInput.Text = "Confirm new password";
             SettingsConfirmPasswordInput.ForeColor = Color.Gray;
+            SettingsConfirmPasswordInput.PasswordChar = '\0';
 
             SettingsFeedback.Text = "";
+        }
+
+        private void SettingsShowCurrentPassword_Click(object sender, EventArgs e)
+        {
+            SettingsCurrentPasswordInput.PasswordChar = '\0';
+        }
+
+        private void SettingsShowNewPassword_Click(object sender, EventArgs e)
+        {
+            SettingsNewPasswordInput.PasswordChar = '\0';
+        }
+
+        private void SettingsShowConfirmNewPassword_Click(object sender, EventArgs e)
+        {
+            SettingsConfirmPasswordInput.PasswordChar = '\0';
         }
 
 
@@ -134,7 +157,7 @@ namespace AccountManager
                 return;
             }
 
-            if ((SettingsCurrentPasswordInput.Text != "" && SettingsCurrentPasswordInput.ForeColor == Color.White) || (SettingsNewPasswordInput.Text != "" && SettingsNewPasswordInput.ForeColor == Color.White) || (SettingsConfirmPasswordInput.Text != "" && SettingsConfirmPasswordInput.ForeColor == Color.White))
+            if ((SettingsNewPasswordInput.Text != "" && SettingsNewPasswordInput.ForeColor == Color.White) || (SettingsConfirmPasswordInput.Text != "" && SettingsConfirmPasswordInput.ForeColor == Color.White))
             {
                 // Change username and password
                 if (Encrypter.SHA256(SettingsCurrentPasswordInput.Text) != password)
@@ -162,10 +185,8 @@ namespace AccountManager
                 if (accountData.Any())
                 {
                     List<KeyValuePair<string, string[]>> tempData = Encrypter.DecryptData(accountData, encryptionKey);
-
                     encryptionKey = SettingsNewPasswordInput.Text;
                     password = Encrypter.SHA256(SettingsNewPasswordInput.Text);
-
                     accountData = Encrypter.EncryptData(tempData, encryptionKey);
                 }
                 else
@@ -181,21 +202,13 @@ namespace AccountManager
                 // Change only username
                 if (SettingsUsernameInput.Text.ToLower() != username)
                 {
-                    try
+                    if (File.Exists(@"" + filePath + username + ".txt"))
                     {
-                        if (File.Exists(@"" + filePath + username + ".txt"))
-                        {
-                            deleteFile(username);
-                        }
+                        deleteFile(username);
+                    }
 
-                        username = SettingsUsernameInput.Text.ToLower();
-                        SaveData();
-                    }
-                    catch (Exception)
-                    {
-                        SettingsFeedback.Text = "Failed to save settings!";
-                        return;
-                    }
+                    username = SettingsUsernameInput.Text.ToLower();
+                    SaveData();
                 }
             }
 

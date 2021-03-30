@@ -7,58 +7,133 @@ namespace AccountManager
 {
     public partial class AccountManagerForm
     {
-        private void GetData(string file)
+        private bool GetData(string file)
         {
-            // Make sure data array is empty
-            accountData.RemoveRange(0, accountData.Count);
-
-            // Read new data
-            string[] lines = File.ReadAllLines(@"" + filePath + file + ".txt");
-
-            // Password is stored to the first line of the file
-            password = lines[0];
-
-            // Get rest of the data
-            for (int i = 1; i < lines.Length; i++)
+            try
             {
-                if ((i + 2) % 3 == 0)
+                // Make sure data array is empty
+                accountData.RemoveRange(0, accountData.Count);
+
+                // Read new data
+                string[] lines = File.ReadAllLines(@"" + filePath + file + ".txt");
+
+                // Password is stored to the first line of the file
+                password = lines[0];
+
+                // Get rest of the data
+                for (int i = 1; i < lines.Length; i++)
                 {
-                    try
-                    {
-                        accountData.Add(new KeyValuePair<string, string[]>(lines[i], new string[] { lines[i + 1], lines[i + 2] }));
-                    }
-                    catch (Exception)
+                    if ((i + 4) % 5 == 0)
                     {
                         try
                         {
-                            accountData.Add(new KeyValuePair<string, string[]>(lines[i], new string[] { lines[i + 1], "Corrupted" }));
+                            accountData.Add(new KeyValuePair<string, string[]>(
+                                lines[i],
+                                new string[] {
+                                lines[i + 1],
+                                lines[i + 2],
+                                lines[i + 3],
+                                lines[i + 4]
+                                }
+                            ));
                         }
                         catch (Exception)
                         {
-                            accountData.Add(new KeyValuePair<string, string[]>(lines[i], new string[] { "Corrupted", "Corrupted" }));
+                            try
+                            {
+                                accountData.Add(new KeyValuePair<string, string[]>(
+                                    lines[i],
+                                    new string[] {
+                                    lines[i + 1],
+                                    lines[i + 2],
+                                    lines[i + 3],
+                                    "Corrupted"
+                                    }
+                                ));
+                            }
+                            catch (Exception)
+                            {
+                                try
+                                {
+                                    accountData.Add(new KeyValuePair<string, string[]>(
+                                        lines[i],
+                                        new string[] {
+                                        lines[i + 1],
+                                        lines[i + 2],
+                                        "Corrupted",
+                                        "Corrupted"
+                                        }
+                                    ));
+                                }
+                                catch (Exception)
+                                {
+                                    try
+                                    {
+                                        accountData.Add(new KeyValuePair<string, string[]>(
+                                            lines[i],
+                                            new string[] {
+                                            lines[i + 1],
+                                            "Corrupted",
+                                            "Corrupted",
+                                            "Corrupted"
+                                            }
+                                        ));
+                                    }
+                                    catch (Exception)
+                                    {
+                                        accountData.Add(new KeyValuePair<string, string[]>(
+                                            lines[i],
+                                            new string[] {
+                                            "Corrupted",
+                                            "Corrupted",
+                                            "Corrupted",
+                                            "Corrupted"
+                                            }
+                                        ));
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
 
-        private void SaveData()
+        private bool SaveData()
         {
-            using (FileStream fs = new FileStream(@"" + filePath + username + ".txt", FileMode.Create, FileAccess.Write))
-            using (StreamWriter sw = new StreamWriter(fs))
+            try
             {
-                sw.Write(password);
-
-                if (accountData.Any())
+                using (FileStream fs = new FileStream(@"" + filePath + username + ".txt", FileMode.Create, FileAccess.Write))
+                using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    foreach (KeyValuePair<string, string[]> data in accountData)
+                    sw.Write(password);
+
+                    if (accountData.Any())
                     {
-                        sw.Write(Environment.NewLine + data.Key);
-                        sw.Write(Environment.NewLine + data.Value[0]);
-                        sw.Write(Environment.NewLine + data.Value[1]);
+                        foreach (KeyValuePair<string, string[]> data in accountData)
+                        {
+                            sw.Write(Environment.NewLine + data.Key);
+                            sw.Write(Environment.NewLine + data.Value[0]);
+                            sw.Write(Environment.NewLine + data.Value[1]);
+                            sw.Write(Environment.NewLine + data.Value[2]);
+                            sw.Write(Environment.NewLine + data.Value[3]);
+                        }
                     }
                 }
+
+                return true;
             }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
 
         private void deleteFile(string fileName)

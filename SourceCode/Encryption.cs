@@ -12,6 +12,7 @@ namespace Encryption
         private const int Keysize = 256;
         private const int DerivationIterations = 1000;
 
+
         public static string Encrypt(string plainText, string passPhrase)
         {
             var saltStringBytes = Generate256BitsOfRandomEntropy();
@@ -31,9 +32,9 @@ namespace Encryption
                         {
                             using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
                             {
+                                var cipherTextBytes = saltStringBytes;
                                 cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
                                 cryptoStream.FlushFinalBlock();
-                                var cipherTextBytes = saltStringBytes;
                                 cipherTextBytes = cipherTextBytes.Concat(ivStringBytes).ToArray();
                                 cipherTextBytes = cipherTextBytes.Concat(memoryStream.ToArray()).ToArray();
                                 memoryStream.Close();
@@ -111,7 +112,15 @@ namespace Encryption
 
             foreach (KeyValuePair<string, string[]> data in ecryptedData)
             {
-                decryptedData.Add(new KeyValuePair<string, string[]>(Decrypt(data.Key, encryptionKey), new string[] { Decrypt(data.Value[0], encryptionKey), Decrypt(data.Value[1], encryptionKey) }));
+                decryptedData.Add(new KeyValuePair<string, string[]>(
+                    Decrypt(data.Key, encryptionKey),
+                    new string[] {
+                        Decrypt(data.Value[0], encryptionKey),
+                        Decrypt(data.Value[1], encryptionKey),
+                        Decrypt(data.Value[2], encryptionKey),
+                        Decrypt(data.Value[3], encryptionKey)
+                    }
+                ));
             }
 
             return decryptedData;
@@ -126,11 +135,20 @@ namespace Encryption
 
             foreach (KeyValuePair<string, string[]> data in decryptedData)
             {
-                encryptedData.Add(new KeyValuePair<string, string[]>(Encrypt(data.Key, encryptionKey), new string[] { Encrypt(data.Value[0], encryptionKey), Encrypt(data.Value[1], encryptionKey) }));
+                encryptedData.Add(new KeyValuePair<string, string[]>(
+                    Encrypt(data.Key, encryptionKey),
+                    new string[] {
+                        Encrypt(data.Value[0], encryptionKey),
+                        Encrypt(data.Value[1], encryptionKey),
+                        Encrypt(data.Value[2], encryptionKey),
+                        Encrypt(data.Value[3], encryptionKey)
+                    }
+                ));
             }
 
             return encryptedData;
         }
+
 
         private static byte[] Generate256BitsOfRandomEntropy()
         {

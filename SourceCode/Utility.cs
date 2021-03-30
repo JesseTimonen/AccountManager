@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 
@@ -9,27 +8,13 @@ namespace AccountManager
     {
         private bool validateUsername(string username)
         {
-            if (Regex.IsMatch(username, @"^[a-zA-Z0-9_]+$"))
-            {
-                return true;
-            }
-
-            return false;
+            return Regex.IsMatch(username, @"^[a-zA-Z0-9_]+$");
         }
+
 
         private bool validatePassword(string password, string confirmationPassword)
         {
-            if (password.Length < 8)
-            {
-                return false;
-            }
-
-            if (password == password.ToLower() || password == password.ToUpper())
-            {
-                return false;
-            }
-
-            if (password != confirmationPassword)
+            if (password.Length < 8 || password == password.ToLower() || password == password.ToUpper() || password != confirmationPassword)
             {
                 return false;
             }
@@ -37,13 +22,13 @@ namespace AccountManager
             return true;
         }
 
-        private string CreateRandomString(int minLenght, int maxLenght)
-        {
-            Random random = new Random();
-            int length = random.Next(minLenght, maxLenght + 1);
 
-            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_*=/<>#)]";
-            StringBuilder randomString = new StringBuilder();
+        private string CreateRandomString(int minLenght = 15, int maxLenght = 25)
+        {
+            int length = random.Next(minLenght, maxLenght + 1);
+            const string validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?@$€-.,~'*=/#&%<>{}()[]";
+            stringBuilder.Clear();
+
             using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
             {
                 byte[] uintBuffer = new byte[sizeof(uint)];
@@ -52,11 +37,11 @@ namespace AccountManager
                 {
                     rng.GetBytes(uintBuffer);
                     uint num = BitConverter.ToUInt32(uintBuffer, 0);
-                    randomString.Append(valid[(int)(num % (uint)valid.Length)]);
+                    stringBuilder.Append(validCharacters[(int)(num % (uint)validCharacters.Length)]);
                 }
             }
 
-            return randomString.ToString();
+            return stringBuilder.ToString();
         }
     }
 }

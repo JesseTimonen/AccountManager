@@ -224,13 +224,16 @@ namespace AccountManager
                 return;
             }
 
-            GetData(username);
+            if (!GetData(username))
+            {
+                LoginFeedback.Text = "Failed to load account data!";
+                return;
+            }
 
             // Check if password was correct
             if (Encrypter.SHA256(LoginPasswordInput.Text) == password)
             {
                 encryptionKey = LoginPasswordInput.Text;
-
                 LoginPanel.Visible = false;
                 MainPanel.Visible = true;
                 ResetLoginUI();
