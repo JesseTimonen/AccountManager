@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using Encryption;
+using System.Diagnostics;
 
 namespace AccountManager
 {
@@ -84,9 +85,17 @@ namespace AccountManager
 
             if (button.Text == "URL")
             {
-                if (Encrypter.Decrypt(accountData[index].Value[0], encryptionKey) != "")
+                var url = Encrypter.Decrypt(accountData[index].Value[0], encryptionKey);
+
+                if (url != "")
                 {
-                    Clipboard.SetText(Encrypter.Decrypt(accountData[index].Value[0], encryptionKey));
+                    if (!url.StartsWith("https://", StringComparison.OrdinalIgnoreCase) && !url.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
+                    {
+                        url = "https://" + url;
+                    }
+
+                    ProcessStartInfo processInfo = new ProcessStartInfo(url);
+                    Process.Start(processInfo);
                 }
             }
             else if (button.Text == "Account")
