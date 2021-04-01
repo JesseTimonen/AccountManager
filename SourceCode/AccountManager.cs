@@ -60,6 +60,8 @@ namespace AccountManager
             }
 
             CreateAccountPlaceholders();
+            ResetRegistrationUI();
+            ResetLoginUI();
         }
 
 

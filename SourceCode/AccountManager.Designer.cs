@@ -36,6 +36,35 @@
             this.AddAccountButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.LogoutButton = new System.Windows.Forms.Button();
+            this.ConfirmDeletePanel = new System.Windows.Forms.Panel();
+            this.ConfirmDeleteBackground = new System.Windows.Forms.Panel();
+            this.ConfirmDeleteLabel = new System.Windows.Forms.Label();
+            this.CancelDeleteAccountButton = new System.Windows.Forms.Button();
+            this.DeleteAccountButton = new System.Windows.Forms.Button();
+            this.ConfirmDeleteTitle = new System.Windows.Forms.Label();
+            this.SettingsPanel = new System.Windows.Forms.Panel();
+            this.SettingsShowCurrentPassword = new System.Windows.Forms.Button();
+            this.SettingsShowNewPassword = new System.Windows.Forms.Button();
+            this.SettingsShowConfirmNewPassword = new System.Windows.Forms.Button();
+            this.ChangePasswordLabel = new System.Windows.Forms.Label();
+            this.SettingsImage4 = new System.Windows.Forms.PictureBox();
+            this.SettingsPanel4 = new System.Windows.Forms.Panel();
+            this.SettingsConfirmPasswordInput = new System.Windows.Forms.TextBox();
+            this.SettingsImage3 = new System.Windows.Forms.PictureBox();
+            this.SettingsPanel3 = new System.Windows.Forms.Panel();
+            this.SettingsNewPasswordInput = new System.Windows.Forms.TextBox();
+            this.ChangeUsernameLabel = new System.Windows.Forms.Label();
+            this.SettingsFeedback = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CancelSettingsButton = new System.Windows.Forms.Button();
+            this.SaveSettingsButton = new System.Windows.Forms.Button();
+            this.SettingsImage2 = new System.Windows.Forms.PictureBox();
+            this.SettingsPanel2 = new System.Windows.Forms.Panel();
+            this.SettingsCurrentPasswordInput = new System.Windows.Forms.TextBox();
+            this.SettingsImage1 = new System.Windows.Forms.PictureBox();
+            this.SettingsPanel1 = new System.Windows.Forms.Panel();
+            this.SettingsUsernameInput = new System.Windows.Forms.TextBox();
+            this.SettingsTitle = new System.Windows.Forms.Label();
             this.AddAccountPanel = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.AddAccountNotesInput = new System.Windows.Forms.TextBox();
@@ -81,35 +110,6 @@
             this.EditAccountNameInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.AccountsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.ConfirmDeletePanel = new System.Windows.Forms.Panel();
-            this.ConfirmDeleteBackground = new System.Windows.Forms.Panel();
-            this.ConfirmDeleteLabel = new System.Windows.Forms.Label();
-            this.CancelDeleteAccountButton = new System.Windows.Forms.Button();
-            this.DeleteAccountButton = new System.Windows.Forms.Button();
-            this.ConfirmDeleteTitle = new System.Windows.Forms.Label();
-            this.SettingsPanel = new System.Windows.Forms.Panel();
-            this.SettingsShowCurrentPassword = new System.Windows.Forms.Button();
-            this.SettingsShowNewPassword = new System.Windows.Forms.Button();
-            this.SettingsShowConfirmNewPassword = new System.Windows.Forms.Button();
-            this.ChangePasswordLabel = new System.Windows.Forms.Label();
-            this.SettingsImage4 = new System.Windows.Forms.PictureBox();
-            this.SettingsPanel4 = new System.Windows.Forms.Panel();
-            this.SettingsConfirmPasswordInput = new System.Windows.Forms.TextBox();
-            this.SettingsImage3 = new System.Windows.Forms.PictureBox();
-            this.SettingsPanel3 = new System.Windows.Forms.Panel();
-            this.SettingsNewPasswordInput = new System.Windows.Forms.TextBox();
-            this.ChangeUsernameLabel = new System.Windows.Forms.Label();
-            this.SettingsFeedback = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CancelSettingsButton = new System.Windows.Forms.Button();
-            this.SaveSettingsButton = new System.Windows.Forms.Button();
-            this.SettingsImage2 = new System.Windows.Forms.PictureBox();
-            this.SettingsPanel2 = new System.Windows.Forms.Panel();
-            this.SettingsCurrentPasswordInput = new System.Windows.Forms.TextBox();
-            this.SettingsImage1 = new System.Windows.Forms.PictureBox();
-            this.SettingsPanel1 = new System.Windows.Forms.Panel();
-            this.SettingsUsernameInput = new System.Windows.Forms.TextBox();
-            this.SettingsTitle = new System.Windows.Forms.Label();
             this.RegistrationPanel = new System.Windows.Forms.Panel();
             this.OverwriteAccountButton = new System.Windows.Forms.Button();
             this.RegistrationFeedback = new System.Windows.Forms.Label();
@@ -135,6 +135,13 @@
             this.RegisterButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.MainPanel.SuspendLayout();
+            this.ConfirmDeletePanel.SuspendLayout();
+            this.ConfirmDeleteBackground.SuspendLayout();
+            this.SettingsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage1)).BeginInit();
             this.AddAccountPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -147,13 +154,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.ConfirmDeletePanel.SuspendLayout();
-            this.ConfirmDeleteBackground.SuspendLayout();
-            this.SettingsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage1)).BeginInit();
             this.RegistrationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrationConfirmPasswordImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrationPasswordImage)).BeginInit();
@@ -267,555 +267,6 @@
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
             this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
-            // 
-            // AddAccountPanel
-            // 
-            this.AddAccountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AddAccountPanel.Controls.Add(this.textBox1);
-            this.AddAccountPanel.Controls.Add(this.AddAccountNotesInput);
-            this.AddAccountPanel.Controls.Add(this.pictureBox8);
-            this.AddAccountPanel.Controls.Add(this.pictureBox7);
-            this.AddAccountPanel.Controls.Add(this.panel4);
-            this.AddAccountPanel.Controls.Add(this.AddAccountURLInput);
-            this.AddAccountPanel.Controls.Add(this.AddAccountRandomButton);
-            this.AddAccountPanel.Controls.Add(this.AddAccountFeedback);
-            this.AddAccountPanel.Controls.Add(this.label2);
-            this.AddAccountPanel.Controls.Add(this.pictureBox3);
-            this.AddAccountPanel.Controls.Add(this.panel3);
-            this.AddAccountPanel.Controls.Add(this.AddAccountTitleInput);
-            this.AddAccountPanel.Controls.Add(this.CancelAddButton);
-            this.AddAccountPanel.Controls.Add(this.AddButton);
-            this.AddAccountPanel.Controls.Add(this.pictureBox1);
-            this.AddAccountPanel.Controls.Add(this.panel1);
-            this.AddAccountPanel.Controls.Add(this.AddAccountPasswordInput);
-            this.AddAccountPanel.Controls.Add(this.pictureBox2);
-            this.AddAccountPanel.Controls.Add(this.panel2);
-            this.AddAccountPanel.Controls.Add(this.AddAccountNameInput);
-            this.AddAccountPanel.Controls.Add(this.label1);
-            this.AddAccountPanel.Location = new System.Drawing.Point(150, 0);
-            this.AddAccountPanel.Name = "AddAccountPanel";
-            this.AddAccountPanel.Size = new System.Drawing.Size(1128, 679);
-            this.AddAccountPanel.TabIndex = 0;
-            this.AddAccountPanel.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(90, 395);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(450, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "Notes";
-            // 
-            // AddAccountNotesInput
-            // 
-            this.AddAccountNotesInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AddAccountNotesInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddAccountNotesInput.ForeColor = System.Drawing.Color.Gray;
-            this.AddAccountNotesInput.Location = new System.Drawing.Point(50, 430);
-            this.AddAccountNotesInput.Multiline = true;
-            this.AddAccountNotesInput.Name = "AddAccountNotesInput";
-            this.AddAccountNotesInput.Size = new System.Drawing.Size(500, 200);
-            this.AddAccountNotesInput.TabIndex = 5;
-            this.AddAccountNotesInput.Text = "...";
-            this.AddAccountNotesInput.Enter += new System.EventHandler(this.AddAccountNotesInput_Enter);
-            this.AddAccountNotesInput.Leave += new System.EventHandler(this.AddAccountNotesInput_Leave);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::AccountManager.Properties.Resources.Notes;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.ErrorImage = global::AccountManager.Properties.Resources.Notes;
-            this.pictureBox8.InitialImage = global::AccountManager.Properties.Resources.Notes;
-            this.pictureBox8.Location = new System.Drawing.Point(50, 390);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox8.TabIndex = 29;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::AccountManager.Properties.Resources.URL;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.ErrorImage = global::AccountManager.Properties.Resources.URL;
-            this.pictureBox7.InitialImage = global::AccountManager.Properties.Resources.URL;
-            this.pictureBox7.Location = new System.Drawing.Point(50, 180);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.TabIndex = 26;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(50, 220);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(500, 1);
-            this.panel4.TabIndex = 24;
-            // 
-            // AddAccountURLInput
-            // 
-            this.AddAccountURLInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AddAccountURLInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddAccountURLInput.ForeColor = System.Drawing.Color.Gray;
-            this.AddAccountURLInput.Location = new System.Drawing.Point(90, 185);
-            this.AddAccountURLInput.Name = "AddAccountURLInput";
-            this.AddAccountURLInput.Size = new System.Drawing.Size(450, 20);
-            this.AddAccountURLInput.TabIndex = 2;
-            this.AddAccountURLInput.Text = "URL";
-            this.AddAccountURLInput.Enter += new System.EventHandler(this.AddAccountURLInput_Enter);
-            this.AddAccountURLInput.Leave += new System.EventHandler(this.AddAccountURLInput_Leave);
-            // 
-            // AddAccountRandomButton
-            // 
-            this.AddAccountRandomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddAccountRandomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddAccountRandomButton.ForeColor = System.Drawing.Color.White;
-            this.AddAccountRandomButton.Location = new System.Drawing.Point(570, 310);
-            this.AddAccountRandomButton.Name = "AddAccountRandomButton";
-            this.AddAccountRandomButton.Size = new System.Drawing.Size(120, 40);
-            this.AddAccountRandomButton.TabIndex = 0;
-            this.AddAccountRandomButton.TabStop = false;
-            this.AddAccountRandomButton.Text = "Randomize";
-            this.AddAccountRandomButton.UseVisualStyleBackColor = true;
-            this.AddAccountRandomButton.Click += new System.EventHandler(this.AddAccountRandomButton_Click);
-            // 
-            // AddAccountFeedback
-            // 
-            this.AddAccountFeedback.ForeColor = System.Drawing.Color.OrangeRed;
-            this.AddAccountFeedback.Location = new System.Drawing.Point(750, 480);
-            this.AddAccountFeedback.Name = "AddAccountFeedback";
-            this.AddAccountFeedback.Size = new System.Drawing.Size(320, 100);
-            this.AddAccountFeedback.TabIndex = 0;
-            this.AddAccountFeedback.Text = "Error Messages";
-            this.AddAccountFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(564, 329);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 23;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::AccountManager.Properties.Resources.Title;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.ErrorImage = global::AccountManager.Properties.Resources.Title;
-            this.pictureBox3.InitialImage = global::AccountManager.Properties.Resources.Title;
-            this.pictureBox3.Location = new System.Drawing.Point(50, 110);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(50, 150);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(500, 1);
-            this.panel3.TabIndex = 0;
-            // 
-            // AddAccountTitleInput
-            // 
-            this.AddAccountTitleInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AddAccountTitleInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddAccountTitleInput.ForeColor = System.Drawing.Color.Gray;
-            this.AddAccountTitleInput.Location = new System.Drawing.Point(90, 115);
-            this.AddAccountTitleInput.Name = "AddAccountTitleInput";
-            this.AddAccountTitleInput.Size = new System.Drawing.Size(450, 20);
-            this.AddAccountTitleInput.TabIndex = 1;
-            this.AddAccountTitleInput.Text = "Title";
-            this.AddAccountTitleInput.Enter += new System.EventHandler(this.AddAccountTitleInput_Enter);
-            this.AddAccountTitleInput.Leave += new System.EventHandler(this.AddAccountTitleInput_Leave);
-            // 
-            // CancelAddButton
-            // 
-            this.CancelAddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.CancelAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelAddButton.ForeColor = System.Drawing.Color.White;
-            this.CancelAddButton.Location = new System.Drawing.Point(920, 600);
-            this.CancelAddButton.Name = "CancelAddButton";
-            this.CancelAddButton.Size = new System.Drawing.Size(150, 50);
-            this.CancelAddButton.TabIndex = 0;
-            this.CancelAddButton.TabStop = false;
-            this.CancelAddButton.Text = "Cancel";
-            this.CancelAddButton.UseVisualStyleBackColor = false;
-            this.CancelAddButton.Click += new System.EventHandler(this.CancelAddButton_Click);
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.ForeColor = System.Drawing.Color.Black;
-            this.AddButton.Location = new System.Drawing.Point(750, 600);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(150, 50);
-            this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "Add account";
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::AccountManager.Properties.Resources.Password;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.ErrorImage = global::AccountManager.Properties.Resources.Password;
-            this.pictureBox1.InitialImage = global::AccountManager.Properties.Resources.Password;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 320);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(50, 360);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1);
-            this.panel1.TabIndex = 0;
-            // 
-            // AddAccountPasswordInput
-            // 
-            this.AddAccountPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AddAccountPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddAccountPasswordInput.ForeColor = System.Drawing.Color.Gray;
-            this.AddAccountPasswordInput.Location = new System.Drawing.Point(90, 325);
-            this.AddAccountPasswordInput.Name = "AddAccountPasswordInput";
-            this.AddAccountPasswordInput.Size = new System.Drawing.Size(450, 20);
-            this.AddAccountPasswordInput.TabIndex = 4;
-            this.AddAccountPasswordInput.Text = "Password";
-            this.AddAccountPasswordInput.Enter += new System.EventHandler(this.AddAccountPasswordInput_Enter);
-            this.AddAccountPasswordInput.Leave += new System.EventHandler(this.AddAccountPasswordInput_Leave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::AccountManager.Properties.Resources.User;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.ErrorImage = global::AccountManager.Properties.Resources.User;
-            this.pictureBox2.InitialImage = global::AccountManager.Properties.Resources.User;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 250);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(50, 290);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(500, 1);
-            this.panel2.TabIndex = 0;
-            // 
-            // AddAccountNameInput
-            // 
-            this.AddAccountNameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AddAccountNameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddAccountNameInput.ForeColor = System.Drawing.Color.Gray;
-            this.AddAccountNameInput.Location = new System.Drawing.Point(90, 255);
-            this.AddAccountNameInput.Name = "AddAccountNameInput";
-            this.AddAccountNameInput.Size = new System.Drawing.Size(450, 20);
-            this.AddAccountNameInput.TabIndex = 3;
-            this.AddAccountNameInput.Text = "Account";
-            this.AddAccountNameInput.Enter += new System.EventHandler(this.AddAccountNameInput_Enter);
-            this.AddAccountNameInput.Leave += new System.EventHandler(this.AddAccountNameInput_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add Account";
-            // 
-            // EditAccountPanel
-            // 
-            this.EditAccountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.EditAccountPanel.Controls.Add(this.EditAccountNotesInput);
-            this.EditAccountPanel.Controls.Add(this.pictureBox10);
-            this.EditAccountPanel.Controls.Add(this.textBox3);
-            this.EditAccountPanel.Controls.Add(this.pictureBox9);
-            this.EditAccountPanel.Controls.Add(this.panel8);
-            this.EditAccountPanel.Controls.Add(this.EditAccountURLInput);
-            this.EditAccountPanel.Controls.Add(this.EditAccountRandomButton);
-            this.EditAccountPanel.Controls.Add(this.EditAccountFeedback);
-            this.EditAccountPanel.Controls.Add(this.label4);
-            this.EditAccountPanel.Controls.Add(this.pictureBox4);
-            this.EditAccountPanel.Controls.Add(this.panel5);
-            this.EditAccountPanel.Controls.Add(this.EditAccountTitleInput);
-            this.EditAccountPanel.Controls.Add(this.CancelEditAccountButton);
-            this.EditAccountPanel.Controls.Add(this.EditAccountButton);
-            this.EditAccountPanel.Controls.Add(this.pictureBox5);
-            this.EditAccountPanel.Controls.Add(this.panel6);
-            this.EditAccountPanel.Controls.Add(this.EditAccountPasswordInput);
-            this.EditAccountPanel.Controls.Add(this.pictureBox6);
-            this.EditAccountPanel.Controls.Add(this.panel7);
-            this.EditAccountPanel.Controls.Add(this.EditAccountNameInput);
-            this.EditAccountPanel.Controls.Add(this.label5);
-            this.EditAccountPanel.Location = new System.Drawing.Point(150, 0);
-            this.EditAccountPanel.Name = "EditAccountPanel";
-            this.EditAccountPanel.Size = new System.Drawing.Size(1128, 679);
-            this.EditAccountPanel.TabIndex = 0;
-            this.EditAccountPanel.Visible = false;
-            // 
-            // EditAccountNotesInput
-            // 
-            this.EditAccountNotesInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.EditAccountNotesInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditAccountNotesInput.ForeColor = System.Drawing.Color.Gray;
-            this.EditAccountNotesInput.Location = new System.Drawing.Point(50, 430);
-            this.EditAccountNotesInput.Multiline = true;
-            this.EditAccountNotesInput.Name = "EditAccountNotesInput";
-            this.EditAccountNotesInput.Size = new System.Drawing.Size(500, 200);
-            this.EditAccountNotesInput.TabIndex = 5;
-            this.EditAccountNotesInput.Text = "...";
-            this.EditAccountNotesInput.Enter += new System.EventHandler(this.EditAccountNotesInput_Enter);
-            this.EditAccountNotesInput.Leave += new System.EventHandler(this.EditAccountNotesInput_Leave);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::AccountManager.Properties.Resources.Notes;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.ErrorImage = global::AccountManager.Properties.Resources.Notes;
-            this.pictureBox10.InitialImage = global::AccountManager.Properties.Resources.Notes;
-            this.pictureBox10.Location = new System.Drawing.Point(50, 390);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox10.TabIndex = 28;
-            this.pictureBox10.TabStop = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(90, 395);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "Notes";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::AccountManager.Properties.Resources.URL;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.ErrorImage = global::AccountManager.Properties.Resources.URL;
-            this.pictureBox9.InitialImage = global::AccountManager.Properties.Resources.URL;
-            this.pictureBox9.Location = new System.Drawing.Point(50, 180);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox9.TabIndex = 26;
-            this.pictureBox9.TabStop = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(50, 220);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(500, 1);
-            this.panel8.TabIndex = 24;
-            // 
-            // EditAccountURLInput
-            // 
-            this.EditAccountURLInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.EditAccountURLInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditAccountURLInput.ForeColor = System.Drawing.Color.Gray;
-            this.EditAccountURLInput.Location = new System.Drawing.Point(90, 185);
-            this.EditAccountURLInput.Name = "EditAccountURLInput";
-            this.EditAccountURLInput.Size = new System.Drawing.Size(450, 20);
-            this.EditAccountURLInput.TabIndex = 2;
-            this.EditAccountURLInput.Text = "URL";
-            this.EditAccountURLInput.Enter += new System.EventHandler(this.EditAccountURLInput_Enter);
-            this.EditAccountURLInput.Leave += new System.EventHandler(this.EditAccountURLInput_Leave);
-            // 
-            // EditAccountRandomButton
-            // 
-            this.EditAccountRandomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditAccountRandomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditAccountRandomButton.ForeColor = System.Drawing.Color.White;
-            this.EditAccountRandomButton.Location = new System.Drawing.Point(570, 310);
-            this.EditAccountRandomButton.Name = "EditAccountRandomButton";
-            this.EditAccountRandomButton.Size = new System.Drawing.Size(120, 40);
-            this.EditAccountRandomButton.TabIndex = 0;
-            this.EditAccountRandomButton.TabStop = false;
-            this.EditAccountRandomButton.Text = "Randomize";
-            this.EditAccountRandomButton.UseVisualStyleBackColor = true;
-            this.EditAccountRandomButton.Click += new System.EventHandler(this.EditAccountRandomButton_Click);
-            // 
-            // EditAccountFeedback
-            // 
-            this.EditAccountFeedback.ForeColor = System.Drawing.Color.OrangeRed;
-            this.EditAccountFeedback.Location = new System.Drawing.Point(750, 480);
-            this.EditAccountFeedback.Name = "EditAccountFeedback";
-            this.EditAccountFeedback.Size = new System.Drawing.Size(300, 100);
-            this.EditAccountFeedback.TabIndex = 0;
-            this.EditAccountFeedback.Text = "Error Message";
-            this.EditAccountFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label4.Location = new System.Drawing.Point(564, 329);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
-            this.label4.TabIndex = 23;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::AccountManager.Properties.Resources.Title;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.ErrorImage = global::AccountManager.Properties.Resources.Title;
-            this.pictureBox4.InitialImage = global::AccountManager.Properties.Resources.Title;
-            this.pictureBox4.Location = new System.Drawing.Point(50, 110);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 22;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(50, 150);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(500, 1);
-            this.panel5.TabIndex = 0;
-            // 
-            // EditAccountTitleInput
-            // 
-            this.EditAccountTitleInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.EditAccountTitleInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditAccountTitleInput.ForeColor = System.Drawing.Color.Gray;
-            this.EditAccountTitleInput.Location = new System.Drawing.Point(90, 115);
-            this.EditAccountTitleInput.Name = "EditAccountTitleInput";
-            this.EditAccountTitleInput.Size = new System.Drawing.Size(450, 20);
-            this.EditAccountTitleInput.TabIndex = 1;
-            this.EditAccountTitleInput.Text = "Title";
-            this.EditAccountTitleInput.Enter += new System.EventHandler(this.EditAccountTitleInput_Enter);
-            this.EditAccountTitleInput.Leave += new System.EventHandler(this.EditAccountTitleInput_Leave);
-            // 
-            // CancelEditAccountButton
-            // 
-            this.CancelEditAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.CancelEditAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelEditAccountButton.ForeColor = System.Drawing.Color.White;
-            this.CancelEditAccountButton.Location = new System.Drawing.Point(920, 600);
-            this.CancelEditAccountButton.Name = "CancelEditAccountButton";
-            this.CancelEditAccountButton.Size = new System.Drawing.Size(150, 50);
-            this.CancelEditAccountButton.TabIndex = 0;
-            this.CancelEditAccountButton.TabStop = false;
-            this.CancelEditAccountButton.Text = "Cancel";
-            this.CancelEditAccountButton.UseVisualStyleBackColor = false;
-            this.CancelEditAccountButton.Click += new System.EventHandler(this.CancelEditAccountButton_Click);
-            // 
-            // EditAccountButton
-            // 
-            this.EditAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.EditAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditAccountButton.ForeColor = System.Drawing.Color.Black;
-            this.EditAccountButton.Location = new System.Drawing.Point(750, 600);
-            this.EditAccountButton.Name = "EditAccountButton";
-            this.EditAccountButton.Size = new System.Drawing.Size(150, 50);
-            this.EditAccountButton.TabIndex = 6;
-            this.EditAccountButton.Text = "Edit account";
-            this.EditAccountButton.UseVisualStyleBackColor = false;
-            this.EditAccountButton.Click += new System.EventHandler(this.EditAccountButton_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::AccountManager.Properties.Resources.Password;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.ErrorImage = global::AccountManager.Properties.Resources.Password;
-            this.pictureBox5.InitialImage = global::AccountManager.Properties.Resources.Password;
-            this.pictureBox5.Location = new System.Drawing.Point(50, 320);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(50, 360);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(500, 1);
-            this.panel6.TabIndex = 0;
-            // 
-            // EditAccountPasswordInput
-            // 
-            this.EditAccountPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.EditAccountPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditAccountPasswordInput.ForeColor = System.Drawing.Color.Gray;
-            this.EditAccountPasswordInput.Location = new System.Drawing.Point(90, 325);
-            this.EditAccountPasswordInput.Name = "EditAccountPasswordInput";
-            this.EditAccountPasswordInput.Size = new System.Drawing.Size(450, 20);
-            this.EditAccountPasswordInput.TabIndex = 4;
-            this.EditAccountPasswordInput.Text = "Password";
-            this.EditAccountPasswordInput.Enter += new System.EventHandler(this.EditAccountPasswordInput_Enter);
-            this.EditAccountPasswordInput.Leave += new System.EventHandler(this.EditAccountPasswordInput_Leave);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::AccountManager.Properties.Resources.User;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.ErrorImage = global::AccountManager.Properties.Resources.User;
-            this.pictureBox6.InitialImage = global::AccountManager.Properties.Resources.User;
-            this.pictureBox6.Location = new System.Drawing.Point(50, 250);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(50, 290);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(500, 1);
-            this.panel7.TabIndex = 0;
-            // 
-            // EditAccountNameInput
-            // 
-            this.EditAccountNameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.EditAccountNameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditAccountNameInput.ForeColor = System.Drawing.Color.Gray;
-            this.EditAccountNameInput.Location = new System.Drawing.Point(90, 255);
-            this.EditAccountNameInput.Name = "EditAccountNameInput";
-            this.EditAccountNameInput.Size = new System.Drawing.Size(450, 20);
-            this.EditAccountNameInput.TabIndex = 3;
-            this.EditAccountNameInput.Text = "Account";
-            this.EditAccountNameInput.Enter += new System.EventHandler(this.EditAccountNameInput_Enter);
-            this.EditAccountNameInput.Leave += new System.EventHandler(this.EditAccountNameInput_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 36);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Edit Account";
-            // 
-            // AccountsPanel
-            // 
-            this.AccountsPanel.AutoScroll = true;
-            this.AccountsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
-            this.AccountsPanel.Location = new System.Drawing.Point(150, 0);
-            this.AccountsPanel.Name = "AccountsPanel";
-            this.AccountsPanel.Size = new System.Drawing.Size(1128, 679);
-            this.AccountsPanel.TabIndex = 0;
             // 
             // ConfirmDeletePanel
             // 
@@ -994,6 +445,7 @@
             // 
             this.SettingsConfirmPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
             this.SettingsConfirmPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SettingsConfirmPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsConfirmPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsConfirmPasswordInput.Location = new System.Drawing.Point(90, 515);
             this.SettingsConfirmPasswordInput.Name = "SettingsConfirmPasswordInput";
@@ -1027,6 +479,7 @@
             // 
             this.SettingsNewPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
             this.SettingsNewPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SettingsNewPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsNewPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsNewPasswordInput.Location = new System.Drawing.Point(90, 435);
             this.SettingsNewPasswordInput.Name = "SettingsNewPasswordInput";
@@ -1116,6 +569,7 @@
             // 
             this.SettingsCurrentPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
             this.SettingsCurrentPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SettingsCurrentPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsCurrentPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsCurrentPasswordInput.Location = new System.Drawing.Point(90, 355);
             this.SettingsCurrentPasswordInput.Name = "SettingsCurrentPasswordInput";
@@ -1149,6 +603,7 @@
             // 
             this.SettingsUsernameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
             this.SettingsUsernameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SettingsUsernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsUsernameInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsUsernameInput.Location = new System.Drawing.Point(90, 185);
             this.SettingsUsernameInput.Name = "SettingsUsernameInput";
@@ -1167,6 +622,563 @@
             this.SettingsTitle.Size = new System.Drawing.Size(123, 36);
             this.SettingsTitle.TabIndex = 0;
             this.SettingsTitle.Text = "Settings";
+            // 
+            // AddAccountPanel
+            // 
+            this.AddAccountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AddAccountPanel.Controls.Add(this.textBox1);
+            this.AddAccountPanel.Controls.Add(this.AddAccountNotesInput);
+            this.AddAccountPanel.Controls.Add(this.pictureBox8);
+            this.AddAccountPanel.Controls.Add(this.pictureBox7);
+            this.AddAccountPanel.Controls.Add(this.panel4);
+            this.AddAccountPanel.Controls.Add(this.AddAccountURLInput);
+            this.AddAccountPanel.Controls.Add(this.AddAccountRandomButton);
+            this.AddAccountPanel.Controls.Add(this.AddAccountFeedback);
+            this.AddAccountPanel.Controls.Add(this.label2);
+            this.AddAccountPanel.Controls.Add(this.pictureBox3);
+            this.AddAccountPanel.Controls.Add(this.panel3);
+            this.AddAccountPanel.Controls.Add(this.AddAccountTitleInput);
+            this.AddAccountPanel.Controls.Add(this.CancelAddButton);
+            this.AddAccountPanel.Controls.Add(this.AddButton);
+            this.AddAccountPanel.Controls.Add(this.pictureBox1);
+            this.AddAccountPanel.Controls.Add(this.panel1);
+            this.AddAccountPanel.Controls.Add(this.AddAccountPasswordInput);
+            this.AddAccountPanel.Controls.Add(this.pictureBox2);
+            this.AddAccountPanel.Controls.Add(this.panel2);
+            this.AddAccountPanel.Controls.Add(this.AddAccountNameInput);
+            this.AddAccountPanel.Controls.Add(this.label1);
+            this.AddAccountPanel.Location = new System.Drawing.Point(150, 0);
+            this.AddAccountPanel.Name = "AddAccountPanel";
+            this.AddAccountPanel.Size = new System.Drawing.Size(1128, 679);
+            this.AddAccountPanel.TabIndex = 0;
+            this.AddAccountPanel.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(90, 395);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(450, 19);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "Notes";
+            // 
+            // AddAccountNotesInput
+            // 
+            this.AddAccountNotesInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AddAccountNotesInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddAccountNotesInput.ForeColor = System.Drawing.Color.Gray;
+            this.AddAccountNotesInput.Location = new System.Drawing.Point(50, 430);
+            this.AddAccountNotesInput.Multiline = true;
+            this.AddAccountNotesInput.Name = "AddAccountNotesInput";
+            this.AddAccountNotesInput.Size = new System.Drawing.Size(500, 200);
+            this.AddAccountNotesInput.TabIndex = 5;
+            this.AddAccountNotesInput.Text = "...";
+            this.AddAccountNotesInput.Enter += new System.EventHandler(this.AddAccountNotesInput_Enter);
+            this.AddAccountNotesInput.Leave += new System.EventHandler(this.AddAccountNotesInput_Leave);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::AccountManager.Properties.Resources.Notes;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.ErrorImage = global::AccountManager.Properties.Resources.Notes;
+            this.pictureBox8.InitialImage = global::AccountManager.Properties.Resources.Notes;
+            this.pictureBox8.Location = new System.Drawing.Point(50, 390);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.TabIndex = 29;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::AccountManager.Properties.Resources.URL;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.ErrorImage = global::AccountManager.Properties.Resources.URL;
+            this.pictureBox7.InitialImage = global::AccountManager.Properties.Resources.URL;
+            this.pictureBox7.Location = new System.Drawing.Point(50, 180);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox7.TabIndex = 26;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(50, 220);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(500, 1);
+            this.panel4.TabIndex = 24;
+            // 
+            // AddAccountURLInput
+            // 
+            this.AddAccountURLInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AddAccountURLInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddAccountURLInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAccountURLInput.ForeColor = System.Drawing.Color.Gray;
+            this.AddAccountURLInput.Location = new System.Drawing.Point(90, 185);
+            this.AddAccountURLInput.Name = "AddAccountURLInput";
+            this.AddAccountURLInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountURLInput.TabIndex = 2;
+            this.AddAccountURLInput.Text = "URL";
+            this.AddAccountURLInput.Enter += new System.EventHandler(this.AddAccountURLInput_Enter);
+            this.AddAccountURLInput.Leave += new System.EventHandler(this.AddAccountURLInput_Leave);
+            // 
+            // AddAccountRandomButton
+            // 
+            this.AddAccountRandomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddAccountRandomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAccountRandomButton.ForeColor = System.Drawing.Color.White;
+            this.AddAccountRandomButton.Location = new System.Drawing.Point(570, 310);
+            this.AddAccountRandomButton.Name = "AddAccountRandomButton";
+            this.AddAccountRandomButton.Size = new System.Drawing.Size(120, 40);
+            this.AddAccountRandomButton.TabIndex = 0;
+            this.AddAccountRandomButton.TabStop = false;
+            this.AddAccountRandomButton.Text = "Randomize";
+            this.AddAccountRandomButton.UseVisualStyleBackColor = true;
+            this.AddAccountRandomButton.Click += new System.EventHandler(this.AddAccountRandomButton_Click);
+            // 
+            // AddAccountFeedback
+            // 
+            this.AddAccountFeedback.ForeColor = System.Drawing.Color.OrangeRed;
+            this.AddAccountFeedback.Location = new System.Drawing.Point(750, 480);
+            this.AddAccountFeedback.Name = "AddAccountFeedback";
+            this.AddAccountFeedback.Size = new System.Drawing.Size(320, 100);
+            this.AddAccountFeedback.TabIndex = 0;
+            this.AddAccountFeedback.Text = "Error Messages";
+            this.AddAccountFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(564, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 23;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::AccountManager.Properties.Resources.Title;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.ErrorImage = global::AccountManager.Properties.Resources.Title;
+            this.pictureBox3.InitialImage = global::AccountManager.Properties.Resources.Title;
+            this.pictureBox3.Location = new System.Drawing.Point(50, 110);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(50, 150);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(500, 1);
+            this.panel3.TabIndex = 0;
+            // 
+            // AddAccountTitleInput
+            // 
+            this.AddAccountTitleInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AddAccountTitleInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddAccountTitleInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAccountTitleInput.ForeColor = System.Drawing.Color.Gray;
+            this.AddAccountTitleInput.Location = new System.Drawing.Point(90, 115);
+            this.AddAccountTitleInput.Name = "AddAccountTitleInput";
+            this.AddAccountTitleInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountTitleInput.TabIndex = 1;
+            this.AddAccountTitleInput.Text = "Title";
+            this.AddAccountTitleInput.Enter += new System.EventHandler(this.AddAccountTitleInput_Enter);
+            this.AddAccountTitleInput.Leave += new System.EventHandler(this.AddAccountTitleInput_Leave);
+            // 
+            // CancelAddButton
+            // 
+            this.CancelAddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.CancelAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelAddButton.ForeColor = System.Drawing.Color.White;
+            this.CancelAddButton.Location = new System.Drawing.Point(920, 600);
+            this.CancelAddButton.Name = "CancelAddButton";
+            this.CancelAddButton.Size = new System.Drawing.Size(150, 50);
+            this.CancelAddButton.TabIndex = 0;
+            this.CancelAddButton.TabStop = false;
+            this.CancelAddButton.Text = "Cancel";
+            this.CancelAddButton.UseVisualStyleBackColor = false;
+            this.CancelAddButton.Click += new System.EventHandler(this.CancelAddButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.ForeColor = System.Drawing.Color.Black;
+            this.AddButton.Location = new System.Drawing.Point(750, 600);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(150, 50);
+            this.AddButton.TabIndex = 5;
+            this.AddButton.Text = "Add account";
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::AccountManager.Properties.Resources.Password;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ErrorImage = global::AccountManager.Properties.Resources.Password;
+            this.pictureBox1.InitialImage = global::AccountManager.Properties.Resources.Password;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 320);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(50, 360);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(500, 1);
+            this.panel1.TabIndex = 0;
+            // 
+            // AddAccountPasswordInput
+            // 
+            this.AddAccountPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AddAccountPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddAccountPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAccountPasswordInput.ForeColor = System.Drawing.Color.Gray;
+            this.AddAccountPasswordInput.Location = new System.Drawing.Point(90, 325);
+            this.AddAccountPasswordInput.Name = "AddAccountPasswordInput";
+            this.AddAccountPasswordInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountPasswordInput.TabIndex = 4;
+            this.AddAccountPasswordInput.Text = "Password";
+            this.AddAccountPasswordInput.Enter += new System.EventHandler(this.AddAccountPasswordInput_Enter);
+            this.AddAccountPasswordInput.Leave += new System.EventHandler(this.AddAccountPasswordInput_Leave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::AccountManager.Properties.Resources.User;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.ErrorImage = global::AccountManager.Properties.Resources.User;
+            this.pictureBox2.InitialImage = global::AccountManager.Properties.Resources.User;
+            this.pictureBox2.Location = new System.Drawing.Point(50, 250);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(50, 290);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(500, 1);
+            this.panel2.TabIndex = 0;
+            // 
+            // AddAccountNameInput
+            // 
+            this.AddAccountNameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AddAccountNameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddAccountNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAccountNameInput.ForeColor = System.Drawing.Color.Gray;
+            this.AddAccountNameInput.Location = new System.Drawing.Point(90, 255);
+            this.AddAccountNameInput.Name = "AddAccountNameInput";
+            this.AddAccountNameInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountNameInput.TabIndex = 3;
+            this.AddAccountNameInput.Text = "Account";
+            this.AddAccountNameInput.Enter += new System.EventHandler(this.AddAccountNameInput_Enter);
+            this.AddAccountNameInput.Leave += new System.EventHandler(this.AddAccountNameInput_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Add Account";
+            // 
+            // EditAccountPanel
+            // 
+            this.EditAccountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.EditAccountPanel.Controls.Add(this.EditAccountNotesInput);
+            this.EditAccountPanel.Controls.Add(this.pictureBox10);
+            this.EditAccountPanel.Controls.Add(this.textBox3);
+            this.EditAccountPanel.Controls.Add(this.pictureBox9);
+            this.EditAccountPanel.Controls.Add(this.panel8);
+            this.EditAccountPanel.Controls.Add(this.EditAccountURLInput);
+            this.EditAccountPanel.Controls.Add(this.EditAccountRandomButton);
+            this.EditAccountPanel.Controls.Add(this.EditAccountFeedback);
+            this.EditAccountPanel.Controls.Add(this.label4);
+            this.EditAccountPanel.Controls.Add(this.pictureBox4);
+            this.EditAccountPanel.Controls.Add(this.panel5);
+            this.EditAccountPanel.Controls.Add(this.EditAccountTitleInput);
+            this.EditAccountPanel.Controls.Add(this.CancelEditAccountButton);
+            this.EditAccountPanel.Controls.Add(this.EditAccountButton);
+            this.EditAccountPanel.Controls.Add(this.pictureBox5);
+            this.EditAccountPanel.Controls.Add(this.panel6);
+            this.EditAccountPanel.Controls.Add(this.EditAccountPasswordInput);
+            this.EditAccountPanel.Controls.Add(this.pictureBox6);
+            this.EditAccountPanel.Controls.Add(this.panel7);
+            this.EditAccountPanel.Controls.Add(this.EditAccountNameInput);
+            this.EditAccountPanel.Controls.Add(this.label5);
+            this.EditAccountPanel.Location = new System.Drawing.Point(150, 0);
+            this.EditAccountPanel.Name = "EditAccountPanel";
+            this.EditAccountPanel.Size = new System.Drawing.Size(1128, 679);
+            this.EditAccountPanel.TabIndex = 0;
+            this.EditAccountPanel.Visible = false;
+            // 
+            // EditAccountNotesInput
+            // 
+            this.EditAccountNotesInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.EditAccountNotesInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditAccountNotesInput.ForeColor = System.Drawing.Color.Gray;
+            this.EditAccountNotesInput.Location = new System.Drawing.Point(50, 430);
+            this.EditAccountNotesInput.Multiline = true;
+            this.EditAccountNotesInput.Name = "EditAccountNotesInput";
+            this.EditAccountNotesInput.Size = new System.Drawing.Size(500, 200);
+            this.EditAccountNotesInput.TabIndex = 5;
+            this.EditAccountNotesInput.Text = "...";
+            this.EditAccountNotesInput.Enter += new System.EventHandler(this.EditAccountNotesInput_Enter);
+            this.EditAccountNotesInput.Leave += new System.EventHandler(this.EditAccountNotesInput_Leave);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::AccountManager.Properties.Resources.Notes;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.ErrorImage = global::AccountManager.Properties.Resources.Notes;
+            this.pictureBox10.InitialImage = global::AccountManager.Properties.Resources.Notes;
+            this.pictureBox10.Location = new System.Drawing.Point(50, 390);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox10.TabIndex = 28;
+            this.pictureBox10.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(90, 395);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 19);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "Notes";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::AccountManager.Properties.Resources.URL;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.ErrorImage = global::AccountManager.Properties.Resources.URL;
+            this.pictureBox9.InitialImage = global::AccountManager.Properties.Resources.URL;
+            this.pictureBox9.Location = new System.Drawing.Point(50, 180);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox9.TabIndex = 26;
+            this.pictureBox9.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(50, 220);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(500, 1);
+            this.panel8.TabIndex = 24;
+            // 
+            // EditAccountURLInput
+            // 
+            this.EditAccountURLInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.EditAccountURLInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditAccountURLInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAccountURLInput.ForeColor = System.Drawing.Color.Gray;
+            this.EditAccountURLInput.Location = new System.Drawing.Point(90, 185);
+            this.EditAccountURLInput.Name = "EditAccountURLInput";
+            this.EditAccountURLInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountURLInput.TabIndex = 2;
+            this.EditAccountURLInput.Text = "URL";
+            this.EditAccountURLInput.Enter += new System.EventHandler(this.EditAccountURLInput_Enter);
+            this.EditAccountURLInput.Leave += new System.EventHandler(this.EditAccountURLInput_Leave);
+            // 
+            // EditAccountRandomButton
+            // 
+            this.EditAccountRandomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditAccountRandomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAccountRandomButton.ForeColor = System.Drawing.Color.White;
+            this.EditAccountRandomButton.Location = new System.Drawing.Point(570, 310);
+            this.EditAccountRandomButton.Name = "EditAccountRandomButton";
+            this.EditAccountRandomButton.Size = new System.Drawing.Size(120, 40);
+            this.EditAccountRandomButton.TabIndex = 0;
+            this.EditAccountRandomButton.TabStop = false;
+            this.EditAccountRandomButton.Text = "Randomize";
+            this.EditAccountRandomButton.UseVisualStyleBackColor = true;
+            this.EditAccountRandomButton.Click += new System.EventHandler(this.EditAccountRandomButton_Click);
+            // 
+            // EditAccountFeedback
+            // 
+            this.EditAccountFeedback.ForeColor = System.Drawing.Color.OrangeRed;
+            this.EditAccountFeedback.Location = new System.Drawing.Point(750, 480);
+            this.EditAccountFeedback.Name = "EditAccountFeedback";
+            this.EditAccountFeedback.Size = new System.Drawing.Size(300, 100);
+            this.EditAccountFeedback.TabIndex = 0;
+            this.EditAccountFeedback.Text = "Error Message";
+            this.EditAccountFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label4.Location = new System.Drawing.Point(564, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.TabIndex = 23;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::AccountManager.Properties.Resources.Title;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.ErrorImage = global::AccountManager.Properties.Resources.Title;
+            this.pictureBox4.InitialImage = global::AccountManager.Properties.Resources.Title;
+            this.pictureBox4.Location = new System.Drawing.Point(50, 110);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 22;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(50, 150);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(500, 1);
+            this.panel5.TabIndex = 0;
+            // 
+            // EditAccountTitleInput
+            // 
+            this.EditAccountTitleInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.EditAccountTitleInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditAccountTitleInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAccountTitleInput.ForeColor = System.Drawing.Color.Gray;
+            this.EditAccountTitleInput.Location = new System.Drawing.Point(90, 115);
+            this.EditAccountTitleInput.Name = "EditAccountTitleInput";
+            this.EditAccountTitleInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountTitleInput.TabIndex = 1;
+            this.EditAccountTitleInput.Text = "Title";
+            this.EditAccountTitleInput.Enter += new System.EventHandler(this.EditAccountTitleInput_Enter);
+            this.EditAccountTitleInput.Leave += new System.EventHandler(this.EditAccountTitleInput_Leave);
+            // 
+            // CancelEditAccountButton
+            // 
+            this.CancelEditAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.CancelEditAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelEditAccountButton.ForeColor = System.Drawing.Color.White;
+            this.CancelEditAccountButton.Location = new System.Drawing.Point(920, 600);
+            this.CancelEditAccountButton.Name = "CancelEditAccountButton";
+            this.CancelEditAccountButton.Size = new System.Drawing.Size(150, 50);
+            this.CancelEditAccountButton.TabIndex = 0;
+            this.CancelEditAccountButton.TabStop = false;
+            this.CancelEditAccountButton.Text = "Cancel";
+            this.CancelEditAccountButton.UseVisualStyleBackColor = false;
+            this.CancelEditAccountButton.Click += new System.EventHandler(this.CancelEditAccountButton_Click);
+            // 
+            // EditAccountButton
+            // 
+            this.EditAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EditAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditAccountButton.ForeColor = System.Drawing.Color.Black;
+            this.EditAccountButton.Location = new System.Drawing.Point(750, 600);
+            this.EditAccountButton.Name = "EditAccountButton";
+            this.EditAccountButton.Size = new System.Drawing.Size(150, 50);
+            this.EditAccountButton.TabIndex = 6;
+            this.EditAccountButton.Text = "Edit account";
+            this.EditAccountButton.UseVisualStyleBackColor = false;
+            this.EditAccountButton.Click += new System.EventHandler(this.EditAccountButton_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::AccountManager.Properties.Resources.Password;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.ErrorImage = global::AccountManager.Properties.Resources.Password;
+            this.pictureBox5.InitialImage = global::AccountManager.Properties.Resources.Password;
+            this.pictureBox5.Location = new System.Drawing.Point(50, 320);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(50, 360);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(500, 1);
+            this.panel6.TabIndex = 0;
+            // 
+            // EditAccountPasswordInput
+            // 
+            this.EditAccountPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.EditAccountPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditAccountPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAccountPasswordInput.ForeColor = System.Drawing.Color.Gray;
+            this.EditAccountPasswordInput.Location = new System.Drawing.Point(90, 325);
+            this.EditAccountPasswordInput.Name = "EditAccountPasswordInput";
+            this.EditAccountPasswordInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountPasswordInput.TabIndex = 4;
+            this.EditAccountPasswordInput.Text = "Password";
+            this.EditAccountPasswordInput.Enter += new System.EventHandler(this.EditAccountPasswordInput_Enter);
+            this.EditAccountPasswordInput.Leave += new System.EventHandler(this.EditAccountPasswordInput_Leave);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::AccountManager.Properties.Resources.User;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.ErrorImage = global::AccountManager.Properties.Resources.User;
+            this.pictureBox6.InitialImage = global::AccountManager.Properties.Resources.User;
+            this.pictureBox6.Location = new System.Drawing.Point(50, 250);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(50, 290);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(500, 1);
+            this.panel7.TabIndex = 0;
+            // 
+            // EditAccountNameInput
+            // 
+            this.EditAccountNameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.EditAccountNameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditAccountNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAccountNameInput.ForeColor = System.Drawing.Color.Gray;
+            this.EditAccountNameInput.Location = new System.Drawing.Point(90, 255);
+            this.EditAccountNameInput.Name = "EditAccountNameInput";
+            this.EditAccountNameInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountNameInput.TabIndex = 3;
+            this.EditAccountNameInput.Text = "Account";
+            this.EditAccountNameInput.Enter += new System.EventHandler(this.EditAccountNameInput_Enter);
+            this.EditAccountNameInput.Leave += new System.EventHandler(this.EditAccountNameInput_Leave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(50, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(185, 36);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Edit Account";
+            // 
+            // AccountsPanel
+            // 
+            this.AccountsPanel.AutoScroll = true;
+            this.AccountsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(64)))), ((int)(((byte)(72)))));
+            this.AccountsPanel.Location = new System.Drawing.Point(150, 0);
+            this.AccountsPanel.Name = "AccountsPanel";
+            this.AccountsPanel.Size = new System.Drawing.Size(1128, 679);
+            this.AccountsPanel.TabIndex = 0;
             // 
             // RegistrationPanel
             // 
@@ -1195,7 +1207,7 @@
             this.OverwriteAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.OverwriteAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OverwriteAccountButton.ForeColor = System.Drawing.Color.Black;
-            this.OverwriteAccountButton.Location = new System.Drawing.Point(566, 364);
+            this.OverwriteAccountButton.Location = new System.Drawing.Point(566, 429);
             this.OverwriteAccountButton.Name = "OverwriteAccountButton";
             this.OverwriteAccountButton.Size = new System.Drawing.Size(150, 50);
             this.OverwriteAccountButton.TabIndex = 4;
@@ -1207,11 +1219,12 @@
             // RegistrationFeedback
             // 
             this.RegistrationFeedback.ForeColor = System.Drawing.Color.OrangeRed;
-            this.RegistrationFeedback.Location = new System.Drawing.Point(466, 444);
+            this.RegistrationFeedback.Location = new System.Drawing.Point(466, 499);
             this.RegistrationFeedback.Name = "RegistrationFeedback";
             this.RegistrationFeedback.Size = new System.Drawing.Size(350, 100);
             this.RegistrationFeedback.TabIndex = 0;
-            this.RegistrationFeedback.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.RegistrationFeedback.Text = "Error Message";
+            this.RegistrationFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RegistrationConfirmPasswordImage
             // 
@@ -1237,6 +1250,7 @@
             // 
             this.RegistrationConfirmPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.RegistrationConfirmPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RegistrationConfirmPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationConfirmPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.RegistrationConfirmPasswordInput.Location = new System.Drawing.Point(556, 289);
             this.RegistrationConfirmPasswordInput.Name = "RegistrationConfirmPasswordInput";
@@ -1244,6 +1258,7 @@
             this.RegistrationConfirmPasswordInput.TabIndex = 3;
             this.RegistrationConfirmPasswordInput.Text = "Confirm password";
             this.RegistrationConfirmPasswordInput.Enter += new System.EventHandler(this.RegisterConfirmPasswordInput_Enter);
+            this.RegistrationConfirmPasswordInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistrationConfirmPasswordInput_KeyDown);
             this.RegistrationConfirmPasswordInput.Leave += new System.EventHandler(this.RegistrationConfirmPasswordInput_Leave);
             // 
             // ReturnLoginButton
@@ -1294,6 +1309,7 @@
             // 
             this.RegistrationPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.RegistrationPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RegistrationPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.RegistrationPasswordInput.Location = new System.Drawing.Point(556, 209);
             this.RegistrationPasswordInput.Name = "RegistrationPasswordInput";
@@ -1301,6 +1317,7 @@
             this.RegistrationPasswordInput.TabIndex = 2;
             this.RegistrationPasswordInput.Text = "Password";
             this.RegistrationPasswordInput.Enter += new System.EventHandler(this.RegisterPasswordInput_Enter);
+            this.RegistrationPasswordInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistrationPasswordInput_KeyDown);
             this.RegistrationPasswordInput.Leave += new System.EventHandler(this.RegistrationPasswordInput_Leave);
             // 
             // RegistrationUsernameImage
@@ -1327,6 +1344,7 @@
             // 
             this.RegistrationUsernameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.RegistrationUsernameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RegistrationUsernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationUsernameInput.ForeColor = System.Drawing.Color.Gray;
             this.RegistrationUsernameInput.Location = new System.Drawing.Point(556, 129);
             this.RegistrationUsernameInput.Name = "RegistrationUsernameInput";
@@ -1335,6 +1353,7 @@
             this.RegistrationUsernameInput.Text = "Username";
             this.RegistrationUsernameInput.TextChanged += new System.EventHandler(this.RegistrationUsernameInput_TextChanged);
             this.RegistrationUsernameInput.Enter += new System.EventHandler(this.RegisterUsernameInput_Enter);
+            this.RegistrationUsernameInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistrationUsernameInput_KeyDown);
             this.RegistrationUsernameInput.Leave += new System.EventHandler(this.RegistrationUsernameInput_Leave);
             // 
             // LoginPanel
@@ -1357,11 +1376,12 @@
             // LoginFeedback
             // 
             this.LoginFeedback.ForeColor = System.Drawing.Color.OrangeRed;
-            this.LoginFeedback.Location = new System.Drawing.Point(466, 364);
+            this.LoginFeedback.Location = new System.Drawing.Point(466, 354);
             this.LoginFeedback.Name = "LoginFeedback";
             this.LoginFeedback.Size = new System.Drawing.Size(350, 100);
             this.LoginFeedback.TabIndex = 0;
-            this.LoginFeedback.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LoginFeedback.Text = "Error Message";
+            this.LoginFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginPasswordImage
             // 
@@ -1387,6 +1407,7 @@
             // 
             this.LoginPasswordInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.LoginPasswordInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginPasswordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.LoginPasswordInput.Location = new System.Drawing.Point(556, 209);
             this.LoginPasswordInput.Name = "LoginPasswordInput";
@@ -1421,12 +1442,13 @@
             // 
             this.LoginUsernameInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.LoginUsernameInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginUsernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.08F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginUsernameInput.ForeColor = System.Drawing.Color.Gray;
             this.LoginUsernameInput.Location = new System.Drawing.Point(556, 129);
             this.LoginUsernameInput.Name = "LoginUsernameInput";
             this.LoginUsernameInput.Size = new System.Drawing.Size(200, 20);
             this.LoginUsernameInput.TabIndex = 1;
-            this.LoginUsernameInput.Text = "Username";
+            this.LoginUsernameInput.Text = "username";
             this.LoginUsernameInput.Enter += new System.EventHandler(this.LoginUsernameInput_Enter);
             this.LoginUsernameInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginUsernameInput_KeyDown);
             this.LoginUsernameInput.Leave += new System.EventHandler(this.LoginUsernameInput_Leave);
@@ -1466,7 +1488,7 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.RegistrationPanel);
             this.Controls.Add(this.LoginPanel);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1475,6 +1497,14 @@
             this.Load += new System.EventHandler(this.AccountManagerForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AccountManagerForm_MouseDown);
             this.MainPanel.ResumeLayout(false);
+            this.ConfirmDeletePanel.ResumeLayout(false);
+            this.ConfirmDeleteBackground.ResumeLayout(false);
+            this.SettingsPanel.ResumeLayout(false);
+            this.SettingsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage1)).EndInit();
             this.AddAccountPanel.ResumeLayout(false);
             this.AddAccountPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -1489,14 +1519,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.ConfirmDeletePanel.ResumeLayout(false);
-            this.ConfirmDeleteBackground.ResumeLayout(false);
-            this.SettingsPanel.ResumeLayout(false);
-            this.SettingsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsImage1)).EndInit();
             this.RegistrationPanel.ResumeLayout(false);
             this.RegistrationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrationConfirmPasswordImage)).EndInit();
