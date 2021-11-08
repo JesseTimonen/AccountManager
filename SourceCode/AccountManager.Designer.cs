@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountManagerForm));
             this.AccountManagerTitle = new System.Windows.Forms.Label();
             this.FormQuitButton = new System.Windows.Forms.Button();
@@ -134,6 +135,7 @@
             this.LoginUsernameInput = new System.Windows.Forms.TextBox();
             this.RegisterButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.ClearClipboardTimer = new System.Windows.Forms.Timer(this.components);
             this.MainPanel.SuspendLayout();
             this.ConfirmDeletePanel.SuspendLayout();
             this.ConfirmDeleteBackground.SuspendLayout();
@@ -170,7 +172,7 @@
             this.AccountManagerTitle.ForeColor = System.Drawing.Color.White;
             this.AccountManagerTitle.Location = new System.Drawing.Point(5, 6);
             this.AccountManagerTitle.Name = "AccountManagerTitle";
-            this.AccountManagerTitle.Size = new System.Drawing.Size(182, 25);
+            this.AccountManagerTitle.Size = new System.Drawing.Size(150, 20);
             this.AccountManagerTitle.TabIndex = 0;
             this.AccountManagerTitle.Text = "Account Manager";
             // 
@@ -417,7 +419,7 @@
             this.ChangePasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePasswordLabel.Location = new System.Drawing.Point(50, 300);
             this.ChangePasswordLabel.Name = "ChangePasswordLabel";
-            this.ChangePasswordLabel.Size = new System.Drawing.Size(171, 25);
+            this.ChangePasswordLabel.Size = new System.Drawing.Size(137, 20);
             this.ChangePasswordLabel.TabIndex = 0;
             this.ChangePasswordLabel.Text = "Change password";
             // 
@@ -449,7 +451,7 @@
             this.SettingsConfirmPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsConfirmPasswordInput.Location = new System.Drawing.Point(90, 515);
             this.SettingsConfirmPasswordInput.Name = "SettingsConfirmPasswordInput";
-            this.SettingsConfirmPasswordInput.Size = new System.Drawing.Size(350, 20);
+            this.SettingsConfirmPasswordInput.Size = new System.Drawing.Size(350, 16);
             this.SettingsConfirmPasswordInput.TabIndex = 4;
             this.SettingsConfirmPasswordInput.Text = "Confirm new password";
             this.SettingsConfirmPasswordInput.Enter += new System.EventHandler(this.SettingsConfirmPasswordInput_Enter);
@@ -483,7 +485,7 @@
             this.SettingsNewPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsNewPasswordInput.Location = new System.Drawing.Point(90, 435);
             this.SettingsNewPasswordInput.Name = "SettingsNewPasswordInput";
-            this.SettingsNewPasswordInput.Size = new System.Drawing.Size(350, 20);
+            this.SettingsNewPasswordInput.Size = new System.Drawing.Size(350, 16);
             this.SettingsNewPasswordInput.TabIndex = 3;
             this.SettingsNewPasswordInput.Text = "New password";
             this.SettingsNewPasswordInput.Enter += new System.EventHandler(this.SettingsNewPasswordInput_Enter);
@@ -495,7 +497,7 @@
             this.ChangeUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeUsernameLabel.Location = new System.Drawing.Point(50, 130);
             this.ChangeUsernameLabel.Name = "ChangeUsernameLabel";
-            this.ChangeUsernameLabel.Size = new System.Drawing.Size(174, 25);
+            this.ChangeUsernameLabel.Size = new System.Drawing.Size(140, 20);
             this.ChangeUsernameLabel.TabIndex = 0;
             this.ChangeUsernameLabel.Text = "Change username";
             // 
@@ -515,7 +517,7 @@
             this.label6.ForeColor = System.Drawing.Color.OrangeRed;
             this.label6.Location = new System.Drawing.Point(177, 522);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 20);
+            this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 23;
             // 
             // CancelSettingsButton
@@ -540,7 +542,7 @@
             this.SaveSettingsButton.Location = new System.Drawing.Point(750, 600);
             this.SaveSettingsButton.Name = "SaveSettingsButton";
             this.SaveSettingsButton.Size = new System.Drawing.Size(150, 50);
-            this.SaveSettingsButton.TabIndex = 5;
+            this.SaveSettingsButton.TabIndex = 6;
             this.SaveSettingsButton.Text = "Save settings";
             this.SaveSettingsButton.UseVisualStyleBackColor = false;
             this.SaveSettingsButton.Click += new System.EventHandler(this.SaveSettingsButton_Click);
@@ -573,7 +575,7 @@
             this.SettingsCurrentPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsCurrentPasswordInput.Location = new System.Drawing.Point(90, 355);
             this.SettingsCurrentPasswordInput.Name = "SettingsCurrentPasswordInput";
-            this.SettingsCurrentPasswordInput.Size = new System.Drawing.Size(350, 20);
+            this.SettingsCurrentPasswordInput.Size = new System.Drawing.Size(350, 16);
             this.SettingsCurrentPasswordInput.TabIndex = 2;
             this.SettingsCurrentPasswordInput.Text = "Current password";
             this.SettingsCurrentPasswordInput.Enter += new System.EventHandler(this.SettingsCurrentPasswordInput_Enter);
@@ -607,7 +609,7 @@
             this.SettingsUsernameInput.ForeColor = System.Drawing.Color.Gray;
             this.SettingsUsernameInput.Location = new System.Drawing.Point(90, 185);
             this.SettingsUsernameInput.Name = "SettingsUsernameInput";
-            this.SettingsUsernameInput.Size = new System.Drawing.Size(350, 20);
+            this.SettingsUsernameInput.Size = new System.Drawing.Size(350, 16);
             this.SettingsUsernameInput.TabIndex = 1;
             this.SettingsUsernameInput.Text = "New username";
             this.SettingsUsernameInput.Enter += new System.EventHandler(this.SettingsUsernameInput_Enter);
@@ -619,7 +621,7 @@
             this.SettingsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsTitle.Location = new System.Drawing.Point(50, 35);
             this.SettingsTitle.Name = "SettingsTitle";
-            this.SettingsTitle.Size = new System.Drawing.Size(123, 36);
+            this.SettingsTitle.Size = new System.Drawing.Size(100, 29);
             this.SettingsTitle.TabIndex = 0;
             this.SettingsTitle.Text = "Settings";
             // 
@@ -660,7 +662,7 @@
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(90, 395);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(450, 19);
+            this.textBox1.Size = new System.Drawing.Size(450, 16);
             this.textBox1.TabIndex = 0;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Notes";
@@ -719,7 +721,7 @@
             this.AddAccountURLInput.ForeColor = System.Drawing.Color.Gray;
             this.AddAccountURLInput.Location = new System.Drawing.Point(90, 185);
             this.AddAccountURLInput.Name = "AddAccountURLInput";
-            this.AddAccountURLInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountURLInput.Size = new System.Drawing.Size(450, 16);
             this.AddAccountURLInput.TabIndex = 2;
             this.AddAccountURLInput.Text = "URL";
             this.AddAccountURLInput.Enter += new System.EventHandler(this.AddAccountURLInput_Enter);
@@ -755,7 +757,7 @@
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
             this.label2.Location = new System.Drawing.Point(564, 329);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 23;
             // 
             // pictureBox3
@@ -786,7 +788,7 @@
             this.AddAccountTitleInput.ForeColor = System.Drawing.Color.Gray;
             this.AddAccountTitleInput.Location = new System.Drawing.Point(90, 115);
             this.AddAccountTitleInput.Name = "AddAccountTitleInput";
-            this.AddAccountTitleInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountTitleInput.Size = new System.Drawing.Size(450, 16);
             this.AddAccountTitleInput.TabIndex = 1;
             this.AddAccountTitleInput.Text = "Title";
             this.AddAccountTitleInput.Enter += new System.EventHandler(this.AddAccountTitleInput_Enter);
@@ -847,7 +849,7 @@
             this.AddAccountPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.AddAccountPasswordInput.Location = new System.Drawing.Point(90, 325);
             this.AddAccountPasswordInput.Name = "AddAccountPasswordInput";
-            this.AddAccountPasswordInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountPasswordInput.Size = new System.Drawing.Size(450, 16);
             this.AddAccountPasswordInput.TabIndex = 4;
             this.AddAccountPasswordInput.Text = "Password";
             this.AddAccountPasswordInput.Enter += new System.EventHandler(this.AddAccountPasswordInput_Enter);
@@ -881,7 +883,7 @@
             this.AddAccountNameInput.ForeColor = System.Drawing.Color.Gray;
             this.AddAccountNameInput.Location = new System.Drawing.Point(90, 255);
             this.AddAccountNameInput.Name = "AddAccountNameInput";
-            this.AddAccountNameInput.Size = new System.Drawing.Size(450, 20);
+            this.AddAccountNameInput.Size = new System.Drawing.Size(450, 16);
             this.AddAccountNameInput.TabIndex = 3;
             this.AddAccountNameInput.Text = "Account";
             this.AddAccountNameInput.Enter += new System.EventHandler(this.AddAccountNameInput_Enter);
@@ -893,7 +895,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 36);
+            this.label1.Size = new System.Drawing.Size(147, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Account";
             // 
@@ -960,7 +962,7 @@
             this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(90, 395);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 19);
+            this.textBox3.Size = new System.Drawing.Size(200, 16);
             this.textBox3.TabIndex = 0;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Notes";
@@ -993,7 +995,7 @@
             this.EditAccountURLInput.ForeColor = System.Drawing.Color.Gray;
             this.EditAccountURLInput.Location = new System.Drawing.Point(90, 185);
             this.EditAccountURLInput.Name = "EditAccountURLInput";
-            this.EditAccountURLInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountURLInput.Size = new System.Drawing.Size(450, 16);
             this.EditAccountURLInput.TabIndex = 2;
             this.EditAccountURLInput.Text = "URL";
             this.EditAccountURLInput.Enter += new System.EventHandler(this.EditAccountURLInput_Enter);
@@ -1029,7 +1031,7 @@
             this.label4.ForeColor = System.Drawing.Color.OrangeRed;
             this.label4.Location = new System.Drawing.Point(564, 329);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 23;
             // 
             // pictureBox4
@@ -1060,7 +1062,7 @@
             this.EditAccountTitleInput.ForeColor = System.Drawing.Color.Gray;
             this.EditAccountTitleInput.Location = new System.Drawing.Point(90, 115);
             this.EditAccountTitleInput.Name = "EditAccountTitleInput";
-            this.EditAccountTitleInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountTitleInput.Size = new System.Drawing.Size(450, 16);
             this.EditAccountTitleInput.TabIndex = 1;
             this.EditAccountTitleInput.Text = "Title";
             this.EditAccountTitleInput.Enter += new System.EventHandler(this.EditAccountTitleInput_Enter);
@@ -1121,7 +1123,7 @@
             this.EditAccountPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.EditAccountPasswordInput.Location = new System.Drawing.Point(90, 325);
             this.EditAccountPasswordInput.Name = "EditAccountPasswordInput";
-            this.EditAccountPasswordInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountPasswordInput.Size = new System.Drawing.Size(450, 16);
             this.EditAccountPasswordInput.TabIndex = 4;
             this.EditAccountPasswordInput.Text = "Password";
             this.EditAccountPasswordInput.Enter += new System.EventHandler(this.EditAccountPasswordInput_Enter);
@@ -1155,7 +1157,7 @@
             this.EditAccountNameInput.ForeColor = System.Drawing.Color.Gray;
             this.EditAccountNameInput.Location = new System.Drawing.Point(90, 255);
             this.EditAccountNameInput.Name = "EditAccountNameInput";
-            this.EditAccountNameInput.Size = new System.Drawing.Size(450, 20);
+            this.EditAccountNameInput.Size = new System.Drawing.Size(450, 16);
             this.EditAccountNameInput.TabIndex = 3;
             this.EditAccountNameInput.Text = "Account";
             this.EditAccountNameInput.Enter += new System.EventHandler(this.EditAccountNameInput_Enter);
@@ -1167,7 +1169,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(50, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 36);
+            this.label5.Size = new System.Drawing.Size(146, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "Edit Account";
             // 
@@ -1254,7 +1256,7 @@
             this.RegistrationConfirmPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.RegistrationConfirmPasswordInput.Location = new System.Drawing.Point(556, 289);
             this.RegistrationConfirmPasswordInput.Name = "RegistrationConfirmPasswordInput";
-            this.RegistrationConfirmPasswordInput.Size = new System.Drawing.Size(200, 20);
+            this.RegistrationConfirmPasswordInput.Size = new System.Drawing.Size(200, 16);
             this.RegistrationConfirmPasswordInput.TabIndex = 3;
             this.RegistrationConfirmPasswordInput.Text = "Confirm password";
             this.RegistrationConfirmPasswordInput.Enter += new System.EventHandler(this.RegisterConfirmPasswordInput_Enter);
@@ -1313,7 +1315,7 @@
             this.RegistrationPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.RegistrationPasswordInput.Location = new System.Drawing.Point(556, 209);
             this.RegistrationPasswordInput.Name = "RegistrationPasswordInput";
-            this.RegistrationPasswordInput.Size = new System.Drawing.Size(200, 20);
+            this.RegistrationPasswordInput.Size = new System.Drawing.Size(200, 16);
             this.RegistrationPasswordInput.TabIndex = 2;
             this.RegistrationPasswordInput.Text = "Password";
             this.RegistrationPasswordInput.Enter += new System.EventHandler(this.RegisterPasswordInput_Enter);
@@ -1348,7 +1350,7 @@
             this.RegistrationUsernameInput.ForeColor = System.Drawing.Color.Gray;
             this.RegistrationUsernameInput.Location = new System.Drawing.Point(556, 129);
             this.RegistrationUsernameInput.Name = "RegistrationUsernameInput";
-            this.RegistrationUsernameInput.Size = new System.Drawing.Size(200, 20);
+            this.RegistrationUsernameInput.Size = new System.Drawing.Size(200, 16);
             this.RegistrationUsernameInput.TabIndex = 1;
             this.RegistrationUsernameInput.Text = "Username";
             this.RegistrationUsernameInput.TextChanged += new System.EventHandler(this.RegistrationUsernameInput_TextChanged);
@@ -1411,7 +1413,7 @@
             this.LoginPasswordInput.ForeColor = System.Drawing.Color.Gray;
             this.LoginPasswordInput.Location = new System.Drawing.Point(556, 209);
             this.LoginPasswordInput.Name = "LoginPasswordInput";
-            this.LoginPasswordInput.Size = new System.Drawing.Size(200, 20);
+            this.LoginPasswordInput.Size = new System.Drawing.Size(200, 16);
             this.LoginPasswordInput.TabIndex = 2;
             this.LoginPasswordInput.Text = "Password";
             this.LoginPasswordInput.Enter += new System.EventHandler(this.LoginPasswordInput_Enter);
@@ -1446,7 +1448,7 @@
             this.LoginUsernameInput.ForeColor = System.Drawing.Color.Gray;
             this.LoginUsernameInput.Location = new System.Drawing.Point(556, 129);
             this.LoginUsernameInput.Name = "LoginUsernameInput";
-            this.LoginUsernameInput.Size = new System.Drawing.Size(200, 20);
+            this.LoginUsernameInput.Size = new System.Drawing.Size(200, 16);
             this.LoginUsernameInput.TabIndex = 1;
             this.LoginUsernameInput.Text = "username";
             this.LoginUsernameInput.Enter += new System.EventHandler(this.LoginUsernameInput_Enter);
@@ -1476,6 +1478,11 @@
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // ClearClipboardTimer
+            // 
+            this.ClearClipboardTimer.Interval = 30000;
+            this.ClearClipboardTimer.Tick += new System.EventHandler(this.ClearClipboardTimer_Tick);
             // 
             // AccountManagerForm
             // 
@@ -1640,6 +1647,7 @@
         private System.Windows.Forms.TextBox EditAccountURLInput;
         private System.Windows.Forms.TextBox EditAccountNotesInput;
         private System.Windows.Forms.Panel SettingsPanel;
+        private System.Windows.Forms.Timer ClearClipboardTimer;
     }
 }
 

@@ -109,7 +109,10 @@ namespace AccountManager
             {
                 if (Encrypter.Decrypt(accountData[index].Value[2], encryptionKey) != "")
                 {
-                    Clipboard.SetText(Encrypter.Decrypt(accountData[index].Value[2], encryptionKey));
+                    lastCopiedPassword = Encrypter.Decrypt(accountData[index].Value[2], encryptionKey);
+                    Clipboard.SetText(lastCopiedPassword);
+                    ClearClipboardTimer.Stop();
+                    ClearClipboardTimer.Start();
                 }
             }
             else if (button.Text == "Delete")

@@ -29,6 +29,7 @@ namespace AccountManager
         private List<Button> deleteButtons = new List<Button>();
         private int editingIndex;
         private int deletedItemIndex = -1;
+        private string lastCopiedPassword = "";
 
 
         public AccountManagerForm()
@@ -446,6 +447,21 @@ namespace AccountManager
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             deletedItemIndex = -1;
+        }
+
+
+        /*=====================================================*\
+        |                    Clear Clipboard                    |
+        \*=====================================================*/
+        private void ClearClipboardTimer_Tick(object sender, EventArgs e)
+        {
+            if (Clipboard.GetText() == lastCopiedPassword)
+            {
+                Clipboard.Clear();
+                ClearClipboardTimer.Stop();
+            }
+
+            lastCopiedPassword = "";
         }
     }
 }
