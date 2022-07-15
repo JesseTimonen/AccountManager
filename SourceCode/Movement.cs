@@ -6,18 +6,26 @@ namespace AccountManager
 {
     public partial class AccountManagerForm
     {
-        [DllImportAttribute("user32.dll")] public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")] public static extern bool ReleaseCapture();
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
+        [DllImport("user32.dll")] public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")] public static extern bool ReleaseCapture();
 
-        // Allows you to drag the application my holding down left mouse button
         public void AccountManagerForm_MouseDown(object sender, MouseEventArgs args)
         {
+            MoveHandler(args);
+        }
+
+        private void AccountManagerTitle_MouseDown(object sender, MouseEventArgs args)
+        {
+            MoveHandler(args);
+        }
+
+        private void MoveHandler(MouseEventArgs args)
+        {
+            // Allows you to drag the application by holding down left mouse button
             if (args.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                SendMessage(Handle, 0xA1, 0x2, 0);
             }
         }
     }

@@ -12,22 +12,11 @@ namespace AccountManager
         /*=====================================================*\
         |                      Settings UI                      |
         \*=====================================================*/
-        private void SettingsUsernameInput_Enter(object sender, EventArgs e)
-        {
-            if (SettingsUsernameInput.ForeColor == Color.Gray)
-            {
-                SettingsUsernameInput.Clear();
-            }
-
-            SettingsUsernameInput.ForeColor = Color.White;
-        }
-
         private void SettingsUsernameInput_Leave(object sender, EventArgs e)
         {
             if (SettingsUsernameInput.Text == "")
             {
-                SettingsUsernameInput.Text = "New Username";
-                SettingsUsernameInput.ForeColor = Color.Gray;
+                SettingsUsernameInput.Text = username;
             }
         }
 
@@ -94,6 +83,86 @@ namespace AccountManager
             }
         }
 
+        private void SettingsMinPasswordInput_Enter(object sender, EventArgs e)
+        {
+            if (SettingsMinPasswordInput.ForeColor == Color.Gray)
+            {
+                SettingsMinPasswordInput.Clear();
+            }
+
+            SettingsMinPasswordInput.ForeColor = Color.White;
+        }
+
+        private void SettingsMinPasswordInput_Leave(object sender, EventArgs e)
+        {
+            SettingsFeedback.Text = "";
+
+            if (SettingsMinPasswordInput.Text == "")
+            {
+                if (int.Parse(SettingsMaxPasswordInput.Text) < 16)
+                {
+                    SettingsMinPasswordInput.Text = SettingsMaxPasswordInput.Text;
+                    SettingsMinPasswordInput.ForeColor = Color.White;
+                }
+                else
+                {
+                    SettingsMinPasswordInput.Text = "16";
+                    SettingsMinPasswordInput.ForeColor = Color.Gray;
+                }
+            }
+            else if (int.Parse(SettingsMinPasswordInput.Text) < 8)
+            {
+                SettingsMinPasswordInput.Text = "8";
+                SettingsFeedback.Text = "Password min lenght can not be lower than 8!";
+            }
+
+            if (int.Parse(SettingsMinPasswordInput.Text) > int.Parse(SettingsMaxPasswordInput.Text))
+            {
+                SettingsMinPasswordInput.Text = SettingsMaxPasswordInput.Text;
+                SettingsFeedback.Text = "Password min lenght can not be higher than password max lenght!";
+            }
+        }
+
+        private void SettingsMaxPasswordInput_Enter(object sender, EventArgs e)
+        {
+            if (SettingsMaxPasswordInput.ForeColor == Color.Gray)
+            {
+                SettingsMaxPasswordInput.Clear();
+            }
+
+            SettingsMaxPasswordInput.ForeColor = Color.White;
+        }
+
+        private void SettingsMaxPasswordInput_Leave(object sender, EventArgs e)
+        {
+            SettingsFeedback.Text = "";
+
+            if (SettingsMaxPasswordInput.Text == "")
+            {
+                if (int.Parse(SettingsMinPasswordInput.Text) > 24)
+                {
+                    SettingsMaxPasswordInput.Text = SettingsMinPasswordInput.Text;
+                    SettingsMaxPasswordInput.ForeColor = Color.White;
+                }
+                else
+                {
+                    SettingsMaxPasswordInput.Text = "24";
+                    SettingsMaxPasswordInput.ForeColor = Color.Gray;
+                }
+            }
+            else if (int.Parse(SettingsMaxPasswordInput.Text) > 50)
+            {
+                SettingsMaxPasswordInput.Text = "50";
+                SettingsFeedback.Text = "Password max lenght can not be higher than 50!";
+            }
+
+            if (int.Parse(SettingsMaxPasswordInput.Text) < int.Parse(SettingsMinPasswordInput.Text))
+            {
+                SettingsMaxPasswordInput.Text = SettingsMinPasswordInput.Text;
+                SettingsFeedback.Text = "Password max lenght can not be lower than password min lenght!";
+            }
+        }
+
         private void resetSettingsUI()
         {
             SettingsUsernameInput.Text = username;
@@ -136,6 +205,7 @@ namespace AccountManager
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             AccountsPanel.Visible = false;
+            AccountSearchPanel.Visible = false;
             AddAccountButton.Enabled = false;
             SettingsButton.Enabled = false;
             LogoutButton.Enabled = false;
@@ -157,12 +227,12 @@ namespace AccountManager
                 return;
             }
 
+            // Change username and password
             if ((SettingsNewPasswordInput.Text != "" && SettingsNewPasswordInput.ForeColor == Color.White) || (SettingsConfirmPasswordInput.Text != "" && SettingsConfirmPasswordInput.ForeColor == Color.White))
             {
-                // Change username and password
                 if (Encrypter.SHA256(SettingsCurrentPasswordInput.Text) != password)
                 {
-                    SettingsFeedback.Text = "Access denied!";
+                    SettingsFeedback.Text = "Current password was wrong, new password was not saved!";
                     return;
                 }
 
@@ -194,12 +264,9 @@ namespace AccountManager
                     encryptionKey = SettingsNewPasswordInput.Text;
                     password = Encrypter.SHA256(SettingsNewPasswordInput.Text);
                 }
-
-                SaveData();
             }
-            else
+            else // Change only username
             {
-                // Change only username
                 if (SettingsUsernameInput.Text.ToLower() != username)
                 {
                     if (File.Exists(@"" + filePath + username + ".txt"))
@@ -208,15 +275,22 @@ namespace AccountManager
                     }
 
                     username = SettingsUsernameInput.Text.ToLower();
-                    SaveData();
                 }
             }
+
+            SaveData();
 
             SettingsPanel.Visible = false;
             AddAccountButton.Enabled = true;
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             AccountsPanel.Visible = true;
+            AccountSearchPanel.Visible = true;
+
+            if (accountData.Count >= accountLimit)
+            {
+                AddAccountButton.Enabled = false;
+            }
         }
 
         private void CancelSettingsButton_Click(object sender, EventArgs e)
@@ -226,6 +300,12 @@ namespace AccountManager
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             AccountsPanel.Visible = true;
+            AccountSearchPanel.Visible = true;
+
+            if (accountData.Count >= accountLimit)
+            {
+                AddAccountButton.Enabled = false;
+            }
         }
     }
 }

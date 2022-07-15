@@ -23,10 +23,26 @@ namespace AccountManager
         }
 
 
-        private string CreateRandomString(int minLenght = 15, int maxLenght = 25)
+        private string CreateRandomString()
         {
-            int length = random.Next(minLenght, maxLenght + 1);
-            const string validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?@$€-.,~'*=/#&%<>{}()[]";
+            int length = random.Next(int.Parse(SettingsMinPasswordInput.Text), int.Parse(SettingsMaxPasswordInput.Text) + 1);
+            string validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            if (SettingsIncludeAdditionalCheckbox.Checked)
+            {
+                validCharacters += "-+_.!?=";
+            }
+
+            if (SettingsIncludeNumbersCheckbox.Checked)
+            {
+                validCharacters += "0123456789";
+            }
+
+            if (SettingsIncludeSpecialCheckbox.Checked)
+            {
+                validCharacters += ":#%&/~*§<>()[]{}€$£@";
+            }
+
             stringBuilder.Clear();
 
             using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())

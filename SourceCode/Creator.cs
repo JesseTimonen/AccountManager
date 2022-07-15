@@ -18,14 +18,14 @@ namespace AccountManager
             // Create placeholders for UI elements
             for (int i = 0; i < accountLimit; i++)
             {
-                Panel accountPanel = CreatePanel(360, 220);
+                Panel accountPanel = CreatePanel(760, 120);
                 Label titleLabel = CreateLabel(accountPanel, 20, 20, 320, 25, 12, Color.White);
-                Label accountLabel = CreateLabel(accountPanel, 20, 50, 320, 25, 10, Color.Gainsboro);
-                Button copyURLButton = CreateButton(accountPanel, 20, 80, 90, 30, "URL", i);
-                Button copyAccountButton = CreateButton(accountPanel, 20, 120, 90, 30, "Account", i);
-                Button copyPasswordButton = CreateButton(accountPanel, 20, 160, 90, 30, "Password", i);
-                Button editButton = CreateButton(accountPanel, 120, 80, 90, 30, "Edit", i);
-                Button deleteButton = CreateButton(accountPanel, 120, 120, 90, 30, "Delete", i);
+                Label accountLabel = CreateLabel(accountPanel, 20, 45, 320, 25, 10, Color.Gainsboro);
+                Button copyURLButton = CreateButton(accountPanel, 20, 75, 90, 30, "URL", i);
+                Button copyAccountButton = CreateButton(accountPanel, 120, 75, 90, 30, "Account", i);
+                Button copyPasswordButton = CreateButton(accountPanel, 220, 75, 90, 30, "Password", i);
+                Button editButton = CreateButton(accountPanel, 340, 75, 90, 30, "Edit", i);
+                Button deleteButton = CreateButton(accountPanel, 440, 75, 90, 30, "Delete", i);
                 accountPanels.Add(accountPanel);
                 titleLabels.Add(titleLabel);
                 accountLabels.Add(accountLabel);
@@ -121,12 +121,13 @@ namespace AccountManager
                 AddAccountButton.Enabled = false;
                 SettingsButton.Enabled = false;
                 LogoutButton.Enabled = false;
-                ConfirmDeleteLabel.Text = "Are you sure you wish to delete account: " + Encrypter.Decrypt(accountData[deletedItemIndex].Key, encryptionKey) + "?";
+                ConfirmDeleteLabel.Text = "Are you sure you want to delete account: " + Encrypter.Decrypt(accountData[deletedItemIndex].Key, encryptionKey) + "?\n This action is permament and can not be undone!";
                 ConfirmDeletePanel.Visible = true;
             }
             else if (button.Text == "Edit")
             {
                 AccountsPanel.Visible = false;
+                AccountSearchPanel.Visible = false;
                 AddAccountButton.Enabled = false;
                 SettingsButton.Enabled = false;
                 LogoutButton.Enabled = false;
@@ -175,6 +176,9 @@ namespace AccountManager
 
                 index++;
             }
+
+            // Filter by search bar
+            AccountSearchBar_KeyUp(null, null);
         }
 
         private void ClearUI()

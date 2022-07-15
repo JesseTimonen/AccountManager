@@ -18,7 +18,7 @@ namespace AccountManager
         private Random random = new Random();
         private StringBuilder stringBuilder = new StringBuilder();
 
-        private const int accountLimit = 100;
+        private const int accountLimit = 500;
         private List<Panel> accountPanels = new List<Panel>();
         private List<Label> titleLabels = new List<Label>();
         private List<Label> accountLabels = new List<Label>();
@@ -191,7 +191,7 @@ namespace AccountManager
         private void AddAccountButton_Click(object sender, EventArgs e)
         {
             AccountsPanel.Visible = false;
-            AddAccountButton.Enabled = false;
+            AccountSearchPanel.Visible = false;
             SettingsButton.Enabled = false;
             LogoutButton.Enabled = false;
             ResetAddAccountUI();
@@ -224,12 +224,13 @@ namespace AccountManager
             ));
 
             SaveData();
-            DisplayAccounts();
             AddAccountPanel.Visible = false;
             AddAccountButton.Enabled = true;
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             AccountsPanel.Visible = true;
+            AccountSearchPanel.Visible = true;
+            DisplayAccounts();
         }
 
         private void CancelAddButton_Click(object sender, EventArgs e)
@@ -239,6 +240,7 @@ namespace AccountManager
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             AccountsPanel.Visible = true;
+            AccountSearchPanel.Visible = true;
         }
 
 
@@ -400,17 +402,18 @@ namespace AccountManager
             ));
             SaveData();
 
-            DisplayAccounts();
             EditAccountPanel.Visible = false;
             AddAccountButton.Enabled = true;
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             AccountsPanel.Visible = true;
+            AccountSearchPanel.Visible = true;
+            DisplayAccounts();
         }
 
         private void EditAccountRandomButton_Click(object sender, EventArgs e)
         {
-            EditAccountPasswordInput.Text = CreateRandomString(15, 20);
+            EditAccountPasswordInput.Text = CreateRandomString();
             EditAccountPasswordInput.ForeColor = Color.White;
         }
 
@@ -421,6 +424,12 @@ namespace AccountManager
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
             AccountsPanel.Visible = true;
+            AccountSearchPanel.Visible = true;
+
+            if (accountData.Count >= accountLimit)
+            {
+                AddAccountButton.Enabled = false;
+            }
         }
 
 
@@ -433,20 +442,60 @@ namespace AccountManager
             AddAccountButton.Enabled = true;
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
+
+            if (accountData.Count >= accountLimit)
+            {
+                AddAccountButton.Enabled = false;
+            }
+
             deletedItemIndex = -1;
         }
 
         private void DeleteAccountButton_Click(object sender, EventArgs e)
         {
             accountData.RemoveAt(deletedItemIndex);
-            DisplayAccounts();
-            SaveData();
-
             ConfirmDeletePanel.Visible = false;
             AddAccountButton.Enabled = true;
             SettingsButton.Enabled = true;
             LogoutButton.Enabled = true;
+            DisplayAccounts();
+            SaveData();
             deletedItemIndex = -1;
+        }
+
+
+        /*=====================================================*\
+        |                       Search Bar                      |
+        \*=====================================================*/
+        private void AccountSearchBar_Enter(object sender, EventArgs e)
+        {
+            if (AccountSearchBar.ForeColor == Color.Gray)
+            {
+                AccountSearchBar.Clear();
+            }
+
+            AccountSearchBar.ForeColor = Color.White;
+        }
+
+        private void AccountSearchBar_Leave(object sender, EventArgs e)
+        {
+            if (AccountSearchBar.Text == "")
+            {
+                AccountSearchBar.Text = "Search ...";
+                AccountSearchBar.ForeColor = Color.Gray;
+            }
+        }
+
+        private void AccountSearchBar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (AccountSearchBar.ForeColor != Color.Gray)
+            {
+                for (int index = 0; index < accountLimit; index++)
+                {
+                    if (index >= accountData.Count) break;
+                    accountPanels[index].Visible = titleLabels[index].Text.ToLower().Contains(AccountSearchBar.Text.ToLower());
+                }
+            }
         }
 
 

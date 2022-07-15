@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace AccountManager
 {
@@ -20,8 +21,51 @@ namespace AccountManager
                 // Password is stored to the first line of the file
                 password = lines[0];
 
+                // Saved passwords start from this line, changed to start at line 6 if settings are loaded
+                int DataStartPoint = 1;
+
+                // Settings are stored to lines 1-5, if settings are not found (older versions) skip them
+                if (lines[1].ToLower() == "true" || lines[1].ToLower() == "false")
+                {
+                    SettingsIncludeAdditionalCheckbox.Checked = Convert.ToBoolean(lines[1]);
+
+                    if (lines[2].ToLower() == "true" || lines[2].ToLower() == "false")
+                    {
+                        SettingsIncludeNumbersCheckbox.Checked = Convert.ToBoolean(lines[2]);
+                    }
+                    else
+                    {
+                        SettingsIncludeNumbersCheckbox.Checked = true;
+                    }
+
+                    if (lines[3].ToLower() == "true" || lines[3].ToLower() == "false")
+                    {
+                        SettingsIncludeSpecialCheckbox.Checked = Convert.ToBoolean(lines[3]);
+                    }
+                    else
+                    {
+                        SettingsIncludeSpecialCheckbox.Checked = false;
+                    }
+
+                    SettingsMinPasswordInput.Text = lines[4];
+                    if (SettingsMinPasswordInput.Text != "16")
+                    {
+                        SettingsMinPasswordInput.ForeColor = Color.White;
+                    }
+                    SettingsMinPasswordInput_Leave(null, null);
+
+                    SettingsMaxPasswordInput.Text = lines[5];
+                    if (SettingsMaxPasswordInput.Text != "24")
+                    {
+                        SettingsMaxPasswordInput.ForeColor = Color.White;
+                    }
+                    SettingsMaxPasswordInput_Leave(null, null);
+
+                    DataStartPoint = 6;
+                }
+
                 // Get rest of the data
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = DataStartPoint; i < lines.Length; i++)
                 {
                     if ((i + 4) % 5 == 0)
                     {
@@ -30,10 +74,10 @@ namespace AccountManager
                             accountData.Add(new KeyValuePair<string, string[]>(
                                 lines[i],
                                 new string[] {
-                                lines[i + 1],
-                                lines[i + 2],
-                                lines[i + 3],
-                                lines[i + 4]
+                                    lines[i + 1],
+                                    lines[i + 2],
+                                    lines[i + 3],
+                                    lines[i + 4]
                                 }
                             ));
                         }
@@ -44,10 +88,10 @@ namespace AccountManager
                                 accountData.Add(new KeyValuePair<string, string[]>(
                                     lines[i],
                                     new string[] {
-                                    lines[i + 1],
-                                    lines[i + 2],
-                                    lines[i + 3],
-                                    "Corrupted"
+                                        lines[i + 1],
+                                        lines[i + 2],
+                                        lines[i + 3],
+                                        "Corrupted"
                                     }
                                 ));
                             }
@@ -58,10 +102,10 @@ namespace AccountManager
                                     accountData.Add(new KeyValuePair<string, string[]>(
                                         lines[i],
                                         new string[] {
-                                        lines[i + 1],
-                                        lines[i + 2],
-                                        "Corrupted",
-                                        "Corrupted"
+                                            lines[i + 1],
+                                            lines[i + 2],
+                                            "Corrupted",
+                                            "Corrupted"
                                         }
                                     ));
                                 }
@@ -72,10 +116,10 @@ namespace AccountManager
                                         accountData.Add(new KeyValuePair<string, string[]>(
                                             lines[i],
                                             new string[] {
-                                            lines[i + 1],
-                                            "Corrupted",
-                                            "Corrupted",
-                                            "Corrupted"
+                                                lines[i + 1],
+                                                "Corrupted",
+                                                "Corrupted",
+                                                "Corrupted"
                                             }
                                         ));
                                     }
@@ -84,10 +128,10 @@ namespace AccountManager
                                         accountData.Add(new KeyValuePair<string, string[]>(
                                             lines[i],
                                             new string[] {
-                                            "Corrupted",
-                                            "Corrupted",
-                                            "Corrupted",
-                                            "Corrupted"
+                                                "Corrupted",
+                                                "Corrupted",
+                                                "Corrupted",
+                                                "Corrupted"
                                             }
                                         ));
                                     }
@@ -113,6 +157,11 @@ namespace AccountManager
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     sw.Write(password);
+                    sw.Write(Environment.NewLine + SettingsIncludeAdditionalCheckbox.Checked.ToString());
+                    sw.Write(Environment.NewLine + SettingsIncludeNumbersCheckbox.Checked.ToString());
+                    sw.Write(Environment.NewLine + SettingsIncludeSpecialCheckbox.Checked.ToString());
+                    sw.Write(Environment.NewLine + SettingsMinPasswordInput.Text);
+                    sw.Write(Environment.NewLine + SettingsMaxPasswordInput.Text);
 
                     if (accountData.Any())
                     {
